@@ -8,8 +8,8 @@ const CaixaDeBusca = () => {
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>
             </div>
             <div className="caixa-busca__resultados" id="resultados">
-                <a>caneca</a>
-                <a>pedestal</a>
+                <a className="caixa-busca__resultados__item">Caneca</a>
+                <a className="caixa-busca__resultados__item">Pedestal</a>
             </div>
         </div>
     )
