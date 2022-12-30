@@ -26,7 +26,7 @@
 }
 
 .botao--login {
-    padding: 0 clamp(1rem, 10vw, 6rem);
+    padding: 0 clamp(1rem, 7vw, 6rem);
     border: solid 1px var(--azul-100);
     color: var(--azul-100);
     transition: .1s;
@@ -35,4 +35,10 @@
 .botao--login:hover {
     background-color: var(--azul-10);
     transition: .1s;
+}
+
+@media screen and (min-width: 720px) {
+    .botao--login {
+        padding: 0 clamp(1rem, 10vw, 6rem);
+    }
 }

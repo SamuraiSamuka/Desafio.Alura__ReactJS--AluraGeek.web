@@ -7,7 +7,7 @@ const SecaoProduto = ({produtos, children}) => {
         <div className="products-section__header">
             <h2 className="products-section__title" id="title">{children}</h2>
             <a href="" className="products-section__seeAll">Ver tudo
-                <span class="material-symbols-outlined">arrow_right_alt</span>
+                <span className="material-symbols-outlined">arrow_right_alt</span>
             </a>
         </div>
         <div className="products-section__body">

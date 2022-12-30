@@ -32,7 +32,7 @@
   }
 }
 
-@media screen and (max-width: 449px) {
+@media screen and (max-width: 450px) {
   .container {
     padding: 16px calc((100% - 355px) / 2) 
   }
@@ -55,14 +55,14 @@
 @media screen and (min-width: 1020px) {
   /* ~8% 205 */
   .container {
-      padding: 24px calc((100% - 830px)/2);
+      padding: 16px calc((100% - 830px)/2);
   }
 }
 
 @media screen and (min-width: 1400px) {
   /* ~8% 205 */
   .container {
-      padding: 24px calc((100% - 1040px)/2);
+      padding: 16px calc((100% - 1040px)/2);
   }
 }
 
