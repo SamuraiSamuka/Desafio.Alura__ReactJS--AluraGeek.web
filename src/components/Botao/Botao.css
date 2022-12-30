@@ -1,0 +1,38 @@
+.botao {
+    box-sizing: border-box;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: fit-content;
+    padding: 0 1.6rem;
+    
+    border-radius: .4rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: .03rem;
+}
+
+.botao--azul {
+
+    background-color: var(--azul-100);
+    color: var(--branco);
+    transition: .1s;
+}
+
+.botao--azul:hover {
+    background-color: var(--azul-80);
+    transition: .1s;
+}
+
+.botao--login {
+    padding: 0 clamp(1rem, 10vw, 6rem);
+    border: solid 1px var(--azul-100);
+    color: var(--azul-100);
+    transition: .1s;
+}
+
+.botao--login:hover {
+    background-color: var(--azul-10);
+    transition: .1s;
+}

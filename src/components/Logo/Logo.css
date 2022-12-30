@@ -1,0 +1,28 @@
+.logo__imagem {
+    height: 3.5rem;
+}
+
+@media screen and (min-width: 720px) {
+    .logo__imagem {
+        width: fit-content;
+        height: 4.5rem;
+        
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .logo__imagem {
+        height: 6vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .logo__imagem {
+        height: 7vh;
+    }
+}
+
+.logo-link {
+    display: flex;
+    justify-content: start;
+}
