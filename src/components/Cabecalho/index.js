@@ -26,11 +26,11 @@ const esconderCaixaBusca = (evento) => {
     cabecalho.style.marginBottom = 0
 }
 
-const Cabecalho = () => {
+const Cabecalho = ({produtos}) => {
     return (
         <div className='cabecalho container'>
             <Logo />
-            <CaixaDeBusca />
+            <CaixaDeBusca produtos={produtos}/>
             <Botao tipo="login">Login</Botao>
             <span onClick={mostrarCaixaBusca} id="lupa" className="caixa-busca__lupa-mobile material-symbols-outlined">search</span>
             <span onClick={esconderCaixaBusca} id="close" className="caixa-busca__close-mobile material-symbols-outlined">close</span>

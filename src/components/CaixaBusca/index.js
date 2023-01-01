@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
 import './CaixaBusca.css'
 
-const CaixaDeBusca = () => {
+const CaixaDeBusca = ({produtos}) => {
     const mostraInput = (evento) => {
-        const input = evento.target.value
-        const resultado = document.querySelector('#itemTeste')
-        input.length > 1 ?
-            resultado.innerHTML = `nenhum resultado encontrado para "${input}"`
-        : resultado.innerHTML = ""
+        const input = evento.target.value.toLowerCase
+        const resultados = document.querySelector('#resultados')
+        let lista = produtos.map(produto => {
+            if(produto.nome.toLowerCase.search(input) != -1){
+                return produto
+            }
+        })
+        console.log(lista)
     }
 
     const [resultados, setResultados] = useState([[]])

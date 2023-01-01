@@ -8,17 +8,14 @@ function App() {
   const [produtos, setProdutos] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:3000/produtos')
-      .then(resposta => resposta.json())
-      .then(dados => {
-        console.log(dados)
-        setProdutos(dados)
-      })
+    fetch('db.json')
+      .then(r => r.json())
+      .then(d => setProdutos(d.produtos))
   }, [])
     
   return (
     <div className="App">
-      <Cabecalho />
+      <Cabecalho produtos={produtos}/>
       <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="star_wars")}>Star Wars</SecaoProduto>
       <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="consoles")}>Consoles</SecaoProduto>
       <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="diversos")}>Diversos</SecaoProduto>
