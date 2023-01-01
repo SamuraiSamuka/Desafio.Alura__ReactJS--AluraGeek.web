@@ -6,7 +6,7 @@ const CaixaDeBusca = ({produtos}) => {
         const input = evento.target.value.toLowerCase
         const resultados = document.querySelector('#resultados')
         let lista = produtos.map(produto => {
-            if(produto.nome.toLowerCase.search(input) != -1){
+            if(produto.nome.indexOf(input) != -1){
                 return produto
             }
         })
