@@ -1,19 +1,25 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import Resultado from '../resultado';
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
+    const [resultados, setResultados] = useState([])
+    
     const mostraInput = (evento) => {
-        const input = evento.target.value.toLowerCase
-        const resultados = document.querySelector('#resultados')
-        let lista = produtos.map(produto => {
-            if(produto.nome.indexOf(input) != -1){
-                return produto
-            }
-        })
-        console.log(lista)
+        const input = evento.target.value.toLowerCase()
+        
+        if (input.length > 1){
+            const lista = produtos.filter(produto => {
+                if(produto.nome.toLowerCase().indexOf(input) !== -1){
+                    return produto
+                }
+            })
+            
+            setResultados(lista)
+        }
+    
     }
 
-    const [resultados, setResultados] = useState([[]])
 
     return (
         <div className="caixa-busca">
@@ -22,7 +28,7 @@ const CaixaDeBusca = ({produtos}) => {
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>
             </div>
             <div className="caixa-busca__resultados" id="resultados">
-                <a className="caixa-busca__resultados__item" id='itemTeste'></a>
+                { resultados.map((produto) => {return <Resultado key={produto.id} link={produto.imagem_src}>{produto.nome}</Resultado>}) }
             </div>
         </div>
     )
