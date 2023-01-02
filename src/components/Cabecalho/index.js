@@ -10,6 +10,7 @@ const mostrarCaixaBusca = (evento) => {
 
     evento.target.style.display = "none"
     close.style.display = "inline"
+
     caixaBusca.style.display = "flex"
     cabecalho.style.marginBottom = '50px'
     cabecalho.style.transition = '0.5s'
@@ -22,6 +23,7 @@ const esconderCaixaBusca = (evento) => {
 
     evento.target.style.display = "none"
     lupa.style.display = "inline"
+    
     caixaBusca.style.display = "none"
     cabecalho.style.marginBottom = 0
 }
