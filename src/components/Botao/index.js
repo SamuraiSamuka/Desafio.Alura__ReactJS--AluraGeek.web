@@ -1,11 +1,11 @@
 import './Botao.css'
 
-const Botao = ({children, tipo }) => {
+const Botao = ({children, tipo, link }) => {
     return (
         tipo === 'login'?
-        <a href="./" className="botao botao--login" >{children}</a>
+        <a href={link} className="botao botao--login" >{children}</a>
         : tipo === undefined ?
-        <a href="./" className="botao botao--azul" >{children}</a>
+        <a href={link} className="botao botao--azul" >{children}</a>
         : ""
     )
 }

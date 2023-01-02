@@ -13,14 +13,14 @@
 }
 
 .banner__titulo {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 700;
     width: fit-content;
     margin-bottom: 1.8rem;
 }
 
 .banner__sub-titulo {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     width: fit-content;
     margin-bottom: 1.6rem;
@@ -28,13 +28,14 @@
 }
 
 .efeitos {
-    padding: 5px 10px;
+    padding: 5px 8px;
     background-color: rgba(255, 255, 255, 0.082);
     border-radius: 10px;
-    /* border: solid rgba(255, 255, 255, 0.308);
-    border-width: 1px 0 0 1px; */
+    border: solid rgba(255, 255, 255, 0.308);
+    border-width: 1px 0 0 1px;
     backdrop-filter: blur(4px) drop-shadow(0 5px 20px black);
     box-shadow: 5px 5px 7px 0 rgba(0, 0, 0, 0.308);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.397);
 }
 
 @media screen and (min-width: 720px) {

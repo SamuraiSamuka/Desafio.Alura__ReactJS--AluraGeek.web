@@ -3,7 +3,7 @@ import Produto from "../Produto"
 
 const SecaoProduto = ({produtos, categoria, children}) => {
     return (
-    <div className="products-section container">
+    <div className="products-section container" id={categoria}>
         <div className="products-section__header">
             <h2 className="products-section__title" id="title">{children}</h2>
             <a href="" className="products-section__seeAll">Ver tudo

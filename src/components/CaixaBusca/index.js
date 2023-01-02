@@ -17,7 +17,6 @@ const CaixaDeBusca = ({produtos}) => {
             
             setResultados(lista)
         }
-    
     }
 
 
@@ -28,7 +27,8 @@ const CaixaDeBusca = ({produtos}) => {
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>
             </div>
             <div className="caixa-busca__resultados" id="resultados">
-                { resultados.length > 0 ? resultados.map((produto) => <Resultado key={produto.id} link={produto.imagem_src}>{produto.nome}</Resultado>) : <Resultado key={0}>Produto não encontrado</Resultado>}
+                { 
+                resultados.length > 0 ? resultados.map((produto) => <Resultado key={produto.id} link={produto.imagem_src}>{produto.nome}</Resultado>) : <Resultado key={0}>Produto não encontrado</Resultado>}
             </div>
         </div>
     )
