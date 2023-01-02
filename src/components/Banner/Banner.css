@@ -15,13 +15,23 @@
 .banner__titulo {
     font-size: 3.2rem;
     font-weight: 700;
+    width: fit-content;
     margin-bottom: 1.8rem;
 }
 
 .banner__sub-titulo {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
+    width: fit-content;
     margin-bottom: 1.6rem;
+    
+}
+
+.efeitos {
+    padding: 5px;
+    backdrop-filter: blur(2px) drop-shadow(0 5px 20px black);
+    box-shadow: 7px 7px 1px 0 rgba(255, 255, 255, 0.308);
+    background-color: rgba(255, 255, 255, 0.089);
 }
 
 @media screen and (min-width: 720px) {
