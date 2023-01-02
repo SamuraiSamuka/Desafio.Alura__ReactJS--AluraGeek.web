@@ -3,7 +3,7 @@
     flex-direction: column;
     
     position: absolute;
-    top: 77px;
+    top: 57px;
     left: 0;
     right: 0;
     
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 0;
 
     box-sizing: border-box;
     width: 100%;
@@ -33,7 +33,7 @@
     text-align: center;
     width: 100%;
     height: 40px;
-    margin: 0 10px;
+    margin: 0 18px;
     background-color: var(--preto-05);
 }
 

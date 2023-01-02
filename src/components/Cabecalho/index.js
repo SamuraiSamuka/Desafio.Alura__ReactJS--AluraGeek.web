@@ -11,9 +11,13 @@ const mostrarCaixaBusca = (evento) => {
     evento.target.style.display = "none"
     close.style.display = "inline"
 
-    caixaBusca.style.display = "flex"
+    caixaBusca.style.top = "77px"
+    caixaBusca.style.transition = '0.5s'
     cabecalho.style.marginBottom = '50px'
     cabecalho.style.transition = '0.5s'
+    setTimeout(()=>{
+        caixaBusca.style.zIndex = '0'
+    }, 100)
 }
 
 const esconderCaixaBusca = (evento) => {
@@ -23,9 +27,12 @@ const esconderCaixaBusca = (evento) => {
 
     evento.target.style.display = "none"
     lupa.style.display = "inline"
-    
-    caixaBusca.style.display = "none"
-    cabecalho.style.marginBottom = 0
+
+    caixaBusca.style.zIndex = '-1'
+    setTimeout(()=>{
+        cabecalho.style.marginBottom = 0
+        caixaBusca.style.top = "0px"
+    }, 100)
 }
 
 const Cabecalho = ({produtos}) => {
