@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import SecaoProduto from './components/SecaoProduto';
 import Cabecalho from './components/Cabecalho';
+import Banner from './components/Banner';
 
 function App() {
 
@@ -16,9 +17,12 @@ function App() {
   return (
     <div className="App">
       <Cabecalho produtos={produtos}/>
-      <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="star_wars")}>Star Wars</SecaoProduto>
-      <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="consoles")}>Consoles</SecaoProduto>
-      <SecaoProduto produtos={produtos.filter(produto=>produto.categoria==="diversos")}>Diversos</SecaoProduto>
+      <Banner />
+      <main className='principal'>
+        <SecaoProduto categoria={'star_wars'} produtos={produtos.filter(produto=>produto.categoria==="star_wars")}>Star Wars</SecaoProduto>
+        <SecaoProduto categoria={'consoles'} produtos={produtos.filter(produto=>produto.categoria==="consoles")}>Consoles</SecaoProduto>
+        <SecaoProduto categoria={'diversos'} produtos={produtos.filter(produto=>produto.categoria==="diversos")}>Diversos</SecaoProduto>
+      </main>
     </div>
   );
   // Falta adicionar as imagens da seção Diversos

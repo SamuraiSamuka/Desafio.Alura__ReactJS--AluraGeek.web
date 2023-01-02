@@ -26,6 +26,11 @@
   box-sizing: border-box;
 }
 
+.principal {
+  padding-top: 5px;
+  background-color: var(--background);
+}
+
 @media screen and (max-width: 356px) {
   .container {
     padding: 16px calc((100% - 300px) / 2) 
@@ -47,8 +52,12 @@
 
 @media screen and (min-width: 720px) {
   /* ~8% 192*/
+  .principal {
+    padding-top: 15px;
+  }
+
   .container {
-      padding: 16px calc((100% - 620px)/2);
+    padding: 16px calc((100% - 620px)/2);
   }
 }
 

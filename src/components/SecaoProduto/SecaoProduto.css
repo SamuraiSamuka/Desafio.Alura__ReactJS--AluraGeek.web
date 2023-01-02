@@ -15,7 +15,6 @@
 
 .products-section {
     display: grid;
-    background-color: var(--background);
 }
 
 .products-section__header {

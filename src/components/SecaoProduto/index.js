@@ -1,7 +1,7 @@
 import './SecaoProduto.css'
 import Produto from "../Produto"
 
-const SecaoProduto = ({produtos, children}) => {
+const SecaoProduto = ({produtos, categoria, children}) => {
     return (
     <div className="products-section container">
         <div className="products-section__header">
