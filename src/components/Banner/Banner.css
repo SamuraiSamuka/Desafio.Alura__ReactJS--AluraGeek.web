@@ -13,7 +13,7 @@
 }
 
 .banner__titulo {
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 700;
     width: fit-content;
     margin-bottom: 1.8rem;
@@ -29,7 +29,7 @@
 
 .efeitos {
     padding: 5px 10px;
-    background-color: rgba(255, 255, 255, 0.11);
+    background-color: rgba(255, 255, 255, 0.082);
     border-radius: 10px;
     /* border: solid rgba(255, 255, 255, 0.308);
     border-width: 1px 0 0 1px; */
