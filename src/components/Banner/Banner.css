@@ -30,7 +30,7 @@
 .efeitos {
     padding: 5px;
     backdrop-filter: blur(2px) drop-shadow(0 5px 20px black);
-    box-shadow: 7px 7px 1px 0 rgba(255, 255, 255, 0.308);
+    /* box-shadow: 7px 7px 1px 0 rgba(255, 255, 255, 0.308); */
     background-color: rgba(255, 255, 255, 0.089);
 }
 
