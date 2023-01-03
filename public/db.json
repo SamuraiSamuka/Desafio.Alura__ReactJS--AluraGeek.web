@@ -101,7 +101,7 @@
       "nome": "Camisa Atari",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_958170-MLB31902417554_082019-O.webp",
-      "categoria": "diversos",
+      "categoria": "roupas",
       "descricao": "Camiseta Atari Games Camisa Geek Retrô Clássicos Anos 80"
     },
     {
@@ -109,8 +109,40 @@
       "nome": "Camisa controle Old",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_607604-MLB52008886942_102022-O.webp",
-      "categoria": "diversos",
+      "categoria": "roupas",
       "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
+    },
+    {
+      "id": 17,
+      "nome": "Camisa big hamburguer",
+      "preco": "R$ 60,00",
+      "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
+      "categoria": "roupas",
+      "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
+    },
+    {
+      "id": 13,
+      "nome": "Camisa Atari",
+      "preco": "R$ 60,00",
+      "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_958170-MLB31902417554_082019-O.webp",
+      "categoria": "roupas",
+      "descricao": "Camiseta Atari Games Camisa Geek Retrô Clássicos Anos 80"
+    },
+    {
+      "id": 14,
+      "nome": "Camisa controle Old",
+      "preco": "R$ 60,00",
+      "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_607604-MLB52008886942_102022-O.webp",
+      "categoria": "roupas",
+      "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
+    },
+    {
+      "id": 17,
+      "nome": "Camisa big hamburguer",
+      "preco": "R$ 60,00",
+      "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
+      "categoria": "roupas",
+      "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
       "id": 15,
@@ -127,14 +159,6 @@
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_696733-MLB52007598392_102022-O.webp",
       "categoria": "diversos",
       "descricao": "Relógio Despertador Digital Elétrico De Mesa Rádio Am/fm 671"
-    },
-    {
-      "id": 17,
-      "nome": "Camisa big hamburguer",
-      "preco": "R$ 60,00",
-      "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
-      "categoria": "diversos",
-      "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
       "id": 18,

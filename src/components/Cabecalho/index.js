@@ -16,7 +16,7 @@ const mostrarCaixaBusca = (evento) => {
     cabecalho.style.marginBottom = '50px'
     cabecalho.style.transition = '0.5s'
     setTimeout(()=>{
-        caixaBusca.style.zIndex = '0'
+        caixaBusca.style.zIndex = '1'
     }, 100)
 }
 

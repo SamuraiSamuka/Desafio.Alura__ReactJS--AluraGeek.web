@@ -3,7 +3,7 @@ import './Banner.css'
 
 const Banner = (props) => {
 
-    const animacao = (id) => {
+    const descerSuavePara = (id) => {
         const destino = document.querySelector(id).offsetTop
         window.scroll({top: destino, behavior: "smooth"})
     }
@@ -13,7 +13,7 @@ const Banner = (props) => {
             <div className='banner'>
                 <h1 className='banner__titulo efeitos'>Dezembro Promocional</h1>
                 <h3 className='banner__sub-titulo efeitos'>Produtos com até 33% de desconto</h3>
-                <Botao link='#null' comportamento={() => {animacao('#diversos')}}>Ver Diversos</Botao>
+                <Botao link='#null' comportamento={() => {descerSuavePara('#diversos')}}>Ver Diversos</Botao>
             </div>
         </div>
     )

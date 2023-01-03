@@ -104,7 +104,7 @@
     flex-direction: column;
     box-sizing: border-box;
     gap: 10px;
-    z-index: 0;
+    z-index: -1;
     width: 100%;
     padding: 10px 1rem 12px;
     background-color: #fafafaec;

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import SecaoProduto from './components/SecaoProduto';
 import Cabecalho from './components/Cabecalho';
 import Banner from './components/Banner';
+import Rodape from './components/Rodape';
 
 function App() {
 
@@ -21,8 +22,9 @@ function App() {
       <main className='principal'>
         <SecaoProduto categoria={'star_wars'} produtos={produtos.filter(produto=>produto.categoria==="star_wars")}>Star Wars</SecaoProduto>
         <SecaoProduto categoria={'consoles'} produtos={produtos.filter(produto=>produto.categoria==="consoles")}>Consoles</SecaoProduto>
-        <SecaoProduto categoria={'diversos'} produtos={produtos.filter(produto=>produto.categoria==="diversos")}>Diversos</SecaoProduto>
+        <SecaoProduto categoria={'roupas'} produtos={produtos.filter(produto=>produto.categoria==="roupas")}>Roupas</SecaoProduto>
       </main>
+      <Rodape />
     </div>
   );
   // Falta adicionar as imagens da seção Diversos
