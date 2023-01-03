@@ -13,7 +13,7 @@ const Banner = (props) => {
             <div className='banner'>
                 <h1 className='banner__titulo efeitos'>Dezembro Promocional</h1>
                 <h3 className='banner__sub-titulo efeitos'>Produtos com até 33% de desconto</h3>
-                <Botao link='#null' comportamento={() => {descerSuavePara('#diversos')}}>Ver Diversos</Botao>
+                <Botao link='#null' comportamento={() => {descerSuavePara('#roupas')}}>Ver Diversos</Botao>
             </div>
         </div>
     )
