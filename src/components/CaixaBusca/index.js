@@ -3,7 +3,7 @@ import Resultado from '../resultado';
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
-    const [resultados, setResultados] = useState([])
+    const [resultados, setResultados] = useState([{}])
     
     const mostraInput = (evento) => {
         const input = evento.target.value.toLowerCase()
