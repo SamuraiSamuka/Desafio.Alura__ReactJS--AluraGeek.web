@@ -1,10 +1,10 @@
 import './CampoTexto.css'
 
-const CampoTexto = ({children}) => {
+const CampoTexto = ({children, type}) => {
     return (
         <div className="campo-texto">
             <label className="campo-texto__label">{children}</label>
-            <input type="text" className="campo-texto__input" />
+            <input type={type || "text"} className="campo-texto__input" />
         </div>
     )
 }

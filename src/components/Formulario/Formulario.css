@@ -1,9 +1,10 @@
 .formulario {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .formulario__titulo {
     font-weight: 700;
+    font-size: 16px;
 }

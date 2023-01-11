@@ -1,10 +1,11 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import SecaoProduto from './components/SecaoProduto';
 import Cabecalho from './components/Cabecalho';
-// import Banner from './components/Banner';
 import Rodape from './components/Rodape';
-import ProdutoDetalhado from './components/ProdutoDetalhado';
+// import Banner from './components/Banner';
+// import SecaoProduto from './components/SecaoProduto';
+// import ProdutoDetalhado from './components/ProdutoDetalhado';
+import Login from './components/Login';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     <div className="App">
       <Cabecalho produtos={produtos}/>
       <main className='principal'>
-        
+        <Login />
       </main>
       <Rodape />
     </div>

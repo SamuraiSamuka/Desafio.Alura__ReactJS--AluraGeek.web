@@ -10,7 +10,7 @@ const ProdutoDetalhado = ({nome, preco, descricao, imagem_src, id}) => {
                 <p className="produto-detalhado__preco" id="produto__preco">{preco}</p>
                 <p className="produto-detalhado__descricao" id="produto__descricao">{descricao}</p>
             </div>
-            <Botao tipo="carrinho">
+            <Botao tipo="100vw">
                 <span className="material-symbols-outlined produto-detalhado__carrinho-icone">shopping_cart</span>
                 <span>Adicionar ao carrinho</span>
             </Botao>

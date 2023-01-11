@@ -1,0 +1,21 @@
+.login-container .formulario {
+    margin: 35% 3%
+}
+
+@media screen and (min-width: 720px) {
+    .login-container .formulario {
+        margin: 15% 20%
+    }      
+}
+
+@media screen and (min-width: 1020px) {
+    .login-container .formulario {
+        margin: 15% 25%
+    } 
+}
+
+@media screen and (min-width: 1400px) {
+    .login-container .formulario {
+        margin: 15% 30%
+    } 
+}

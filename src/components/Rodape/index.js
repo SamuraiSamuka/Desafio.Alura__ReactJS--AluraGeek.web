@@ -1,5 +1,8 @@
-import FormularioContato from '../FormularioContato'
+import Formulario from '../Formulario'
 import Logo from '../Logo'
+import CampoTextArea from '../CampoTextArea'
+import CampoTexto from '../CampoTexto'
+import Botao from '../Botao'
 import './Rodape.css'
 
 const Rodape = () => {
@@ -20,7 +23,11 @@ const Rodape = () => {
                     </nav>
                 </div>
                 <div className="contato-container saiba-mais__grid">
-                    <FormularioContato titulo="Fale conosco"/>
+                    <Formulario titulo="Fale conosco">
+                        <CampoTexto>Nome</CampoTexto>
+                        <CampoTextArea></CampoTextArea>
+                        <Botao>Enviar mensagem</Botao>
+                    </Formulario>
                 </div>
             </div>
             <div className="sobre container">

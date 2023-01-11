@@ -32,16 +32,8 @@
   background-color: var(--background);
 }
 
-@media screen and (max-width: 356px) {
-  .container {
-    padding: 16px calc((100% - 300px) / 2) 
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .container {
-    padding: 16px calc((100% - 355px) / 2) 
-  }
+.container {
+    padding: 16px 5% 
 }
 
 @media screen and (min-width: 450px) {

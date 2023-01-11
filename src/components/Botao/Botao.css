@@ -3,7 +3,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 4.5rem;
+    height: 5rem;
     width: fit-content;
     padding: 0 1.6rem;
     
@@ -26,6 +26,7 @@
 }
 
 .botao--login {
+    height: 4.5rem;
     padding: 0 clamp(1rem, 7vw, 6rem);
     border: solid 1px var(--azul-100);
     color: var(--azul-100);
@@ -37,7 +38,7 @@
     transition: .1s;
 }
 
-.botao--carrinho {
+.botao--100vw {
     width: 100%;
 }
 

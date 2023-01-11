@@ -40,7 +40,7 @@ const Cabecalho = ({produtos}) => {
         <div className='cabecalho container'>
             <Logo />
             <CaixaDeBusca produtos={produtos}/>
-            <Botao tipo="login">Login</Botao>
+            <Botao aparencia="login">Login</Botao>
             <span onClick={mostrarCaixaBusca} id="lupa" className="caixa-busca__lupa-mobile material-symbols-outlined">search</span>
             <span onClick={esconderCaixaBusca} id="close" className="caixa-busca__close-mobile material-symbols-outlined">close</span>
         </div>

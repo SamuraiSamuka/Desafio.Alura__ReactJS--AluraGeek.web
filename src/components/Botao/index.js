@@ -1,13 +1,13 @@
 import './Botao.css'
 
-const Botao = ({children, tipo, link, comportamento }) => {
+const Botao = ({children, type, aparencia, link, comportamento }) => {
     return (
-        tipo === 'login'?
-        <a href={link} className="botao botao--login" onClick={comportamento}>{children}</a>
-        : tipo === undefined ?
-        <a href={link} className="botao botao--azul" onClick={comportamento}>{children}</a>
-        : tipo === 'carrinho' ?
-        <a href={link} className="botao botao--carrinho botao--azul" onClick={comportamento}>{children}</a>
+        aparencia === undefined ?
+            <button type={type || 'submit'} href={link} className="botao botao--azul" onClick={comportamento}>{children}</button>
+        : aparencia === '100vw'?
+            <button type={type || 'submit'} href={link} className="botao botao--azul botao--100vw" onClick={comportamento}>{children}</button>
+        : aparencia === 'login'?
+            <button type={type || 'submit'} href={link} className="botao botao--login" onClick={comportamento}>{children}</button>
         : ''
     )
 }

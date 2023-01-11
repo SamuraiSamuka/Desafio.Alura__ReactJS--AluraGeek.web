@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Resultado from '../resultado';
+import Resultado from '../Resultado';
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
