@@ -1,0 +1,114 @@
+.principal {
+    padding-top: 0;
+    position: relative;
+}
+
+
+.produto-detalhado {
+    background-color: rgb(247, 247, 247);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.produto-detalhado__imagem {
+    max-width: 100%;
+    height: fit-content;
+    max-height: 380px;
+    border-radius: 10px;
+}
+
+.produto-detalhado__titulo {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.produto-detalhado__preco {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.produto-detalhado__carrinho-icone{
+    margin-right: 8px;
+}
+
+@media screen and (min-width: 720px) {
+    .produto-detalhado {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'imagem titulo'
+        'imagem info'
+        'imagem botao';
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .produto-detalhado__titulo {
+        grid-area: titulo;
+        align-self: flex-start;
+        margin-top: 20px;
+    }
+
+    .produto-detalhado__imagem {
+        max-width: 100%;
+        max-height: 390px;
+        grid-area: imagem;
+    }
+    
+    .produto-detalhado .botao {
+        grid-area: botao;
+        align-self: flex-end;
+    }
+
+    .produto-detalhado__carrinho {
+        justify-self: flex-end;
+    }
+
+    .produto-detalhado__info {
+        display: grid;
+        grid-area: info;
+        gap: 10px
+    }
+}
+
+/* 
+
+
+
+
+.produto-detalhado__imagem-desktop {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .principal {
+        padding-top: 3.2rem;
+    }
+
+    .produto-detalhado {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.6rem;
+        align-items: center;
+    }
+    
+    .produto-detalhado__imagem-mobile {
+        display: none;
+    }
+
+    .produto-detalhado__imagem-desktop {
+        display: block;
+        width: 100%;
+        border-radius: .4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .principal {
+        padding-top: 4rem;
+    }
+} */

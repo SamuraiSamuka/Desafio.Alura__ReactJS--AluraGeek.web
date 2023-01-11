@@ -37,6 +37,10 @@
     transition: .1s;
 }
 
+.botao--carrinho {
+    width: 100%;
+}
+
 @media screen and (min-width: 720px) {
     .botao--login {
         padding: 0 clamp(1rem, 10vw, 6rem);

@@ -3,20 +3,20 @@ import Resultado from '../resultado';
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
-    const [resultados, setResultados] = useState([{}])
+    const [resultados, setResultados] = useState([{nulo:true}])
     
     const mostraInput = (evento) => {
         const input = evento.target.value.toLowerCase()
         
         if (input.length > 1){
-            const lista = produtos.filter(produto => {
-                if(produto.nome.toLowerCase().indexOf(input) !== -1){
-                    return produto
-                }
-            })
+            const lista = produtos.filter(
+                produto => (produto.nome.toLowerCase().indexOf(input) !== -1) ? 
+                    produto
+                    :false)
             setResultados(lista)
         } else {
             setResultados([{nulo:true}])
+            console.log(resultados)
         }
     }
 
@@ -27,7 +27,12 @@ const CaixaDeBusca = ({produtos}) => {
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>
             </div>
             <div className="caixa-busca__resultados" id="resultados">
-                { resultados.length === 0 ? <Resultado key={0}>Produto não encontrado</Resultado>: resultados[0].nulo === undefined ? resultados.map((produto) => <Resultado key={produto.id} link={produto.imagem_src}>{produto.nome}</Resultado>): '' }
+                { resultados.length === 0 ? 
+                    <Resultado key={0}>Produto não encontrado</Resultado>
+                    : 
+                    resultados[0].nulo === true ? 
+                        '':    
+                        resultados.map((produto) => <Resultado key={produto.id || 0} link={produto.imagem_src}>{produto.nome}</Resultado>)}
             </div>
         </div>
     )

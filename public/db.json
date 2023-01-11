@@ -113,7 +113,7 @@
       "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
     },
     {
-      "id": 17,
+      "id": 15,
       "nome": "Camisa big hamburguer",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
@@ -121,7 +121,7 @@
       "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
-      "id": 13,
+      "id": 16,
       "nome": "Camisa Atari",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_958170-MLB31902417554_082019-O.webp",
@@ -129,7 +129,7 @@
       "descricao": "Camiseta Atari Games Camisa Geek Retrô Clássicos Anos 80"
     },
     {
-      "id": 14,
+      "id": 17,
       "nome": "Camisa controle Old",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_607604-MLB52008886942_102022-O.webp",
@@ -137,7 +137,7 @@
       "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
     },
     {
-      "id": 17,
+      "id": 18,
       "nome": "Camisa big hamburguer",
       "preco": "R$ 60,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
@@ -145,7 +145,7 @@
       "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
-      "id": 15,
+      "id": 19,
       "nome": "Boneco sonic",
       "preco": "R$ 80,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_645695-MLB51339932947_082022-O.webp",
@@ -153,7 +153,7 @@
       "descricao": "Sonic - Boneco Do Sonic- 2.5 Polegadas"
     },
     {
-      "id": 16,
+      "id": 20,
       "nome": "Despertador vintage",
       "preco": "R$ 100,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_696733-MLB52007598392_102022-O.webp",
@@ -161,7 +161,7 @@
       "descricao": "Relógio Despertador Digital Elétrico De Mesa Rádio Am/fm 671"
     },
     {
-      "id": 18,
+      "id": 21,
       "nome": "Pikachu de pelúcia gigante",
       "preco": "R$ 250,00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_770013-MLB51388184888_092022-O.webp",
