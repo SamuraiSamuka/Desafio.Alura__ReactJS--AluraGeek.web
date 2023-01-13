@@ -34,3 +34,14 @@
     background-color: var(--azul-10);
     transition: .1s;
 }
+
+.botao--cinza {
+    border: solid 1px var(--preto-50);
+    color: var(--preto-75);
+    background-color: var(--branco);
+}
+
+.botao--cinza:hover {
+    background-color: var(--preto-02);
+    transition: .1s;
+}

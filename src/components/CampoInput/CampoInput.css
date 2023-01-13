@@ -52,10 +52,8 @@
     height: 5.8rem;
     padding: 5px 14px;
     
-    color: var(--preto-50);
     border: none;
     border-bottom: solid 2px var(--preto-25);
-    background-color: white;
 }
 
 
@@ -72,7 +70,7 @@
     resize: vertical;
     width: 100%;
     min-height: 8rem;
-    max-height: 15rem;
+    max-height: 16rem;
     padding: 0;
     
     font-weight: 400;
@@ -80,4 +78,10 @@
 
 .campo-textarea__input:focus-within {
     outline: none;
+}
+
+.campo-radio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }

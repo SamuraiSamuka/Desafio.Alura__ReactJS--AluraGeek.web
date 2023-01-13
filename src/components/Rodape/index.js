@@ -13,19 +13,19 @@ const Rodape = () => {
                 </div>
                 <div className="links-container saiba-mais__grid">
                     <nav className="saiba-mais__nav">
-                        <a href="#" className="saiba-mais__nav__link">Quem somos nós</a>
-                        <a href="#" className="saiba-mais__nav__link">Política de privacidade</a>
-                        <a href="#" className="saiba-mais__nav__link">Programa fidelidade</a>
-                        <a href="#" className="saiba-mais__nav__link">Nossas lojas</a>
-                        <a href="#" className="saiba-mais__nav__link">Quero ser franqueado</a>
-                        <a href="#" className="saiba-mais__nav__link">Anuncia aqui</a>
+                        <a href="#null" className="saiba-mais__nav__link">Quem somos nós</a>
+                        <a href="#null" className="saiba-mais__nav__link">Política de privacidade</a>
+                        <a href="#null" className="saiba-mais__nav__link">Programa fidelidade</a>
+                        <a href="#null" className="saiba-mais__nav__link">Nossas lojas</a>
+                        <a href="#null" className="saiba-mais__nav__link">Quero ser franqueado</a>
+                        <a href="#null" className="saiba-mais__nav__link">Anuncia aqui</a>
                     </nav>
                 </div>
                 <div className="contato-container saiba-mais__grid">
                     <Formulario titulo="Fale conosco">
-                        <CampoInput>Nome</CampoInput>
-                        <CampoInput type="textarea" maximo={250}>Escreva sua mensagem</CampoInput>
-                        <Botao>Enviar mensagem</Botao>
+                        <CampoInput minimo={4} maximo={40} required>Nome</CampoInput>
+                        <CampoInput type="textarea" maximo={350} required>Escreva sua mensagem</CampoInput>
+                        <Botao type="submit">Enviar mensagem</Botao>
                     </Formulario>
                 </div>
             </div>

@@ -13,10 +13,10 @@
 .formulario-container .formulario__titulo {
     text-align: center;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-.formulario-container .botao-submit {
+.formulario-container .botao {
     width: 100%;
 }
 

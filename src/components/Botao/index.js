@@ -5,9 +5,9 @@ const Botao = ({children, type, aparencia, link, comportamento }) => {
         aparencia === undefined ?
             <button type={type || 'submit'} href={link} className="botao botao--azul" onClick={comportamento}>{children}</button>
         : aparencia === 'transparente'?
-        <button type={type} href={link} className="botao botao--transparente" onClick={comportamento}>{children}</button>
+        <button type={type || 'button'} href={link} className="botao botao--transparente" onClick={comportamento}>{children}</button>
         : aparencia === 'cinza'?
-        <button type={type} href={link} className="botao botao--cinza" onClick={comportamento}>{children}</button>
+        <button type={type || 'button'} href={link} className="botao botao--cinza" onClick={comportamento}>{children}</button>
         : ''
     )
 }

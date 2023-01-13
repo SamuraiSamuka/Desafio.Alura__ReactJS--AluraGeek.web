@@ -26,6 +26,7 @@ function App() {
       <main className='principal'>
         <CadastroUsuario />
         <CadastroProduto />
+        <Login />
       </main>
       <Rodape />
     </div>
