@@ -8,6 +8,7 @@ import Rodape from './components/Rodape';
 import Login from './components/Login';
 import CadastroProduto from './components/CadastroProduto';
 import CadastroUsuario from './components/CadastroUsuario';
+import EsqueciSenha from './components/EsqueciSenha';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <CadastroUsuario />
         <CadastroProduto />
         <Login />
+        <EsqueciSenha></EsqueciSenha>
       </main>
       <Rodape />
     </div>

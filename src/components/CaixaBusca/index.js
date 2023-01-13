@@ -31,7 +31,6 @@ const CaixaDeBusca = ({produtos}) => {
                 : 
                     resultados[0].nulo === true ? 
                         '': 
-                        
                         resultados.map((produto) => <a className="caixa-busca__resultados__item" href={produto.imagem_src} key={produto.id || 0}>{produto.nome}</a>  )}
             </div>
         </div>
