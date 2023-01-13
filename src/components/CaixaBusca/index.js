@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Resultado from '../Resultado';
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
@@ -27,12 +26,13 @@ const CaixaDeBusca = ({produtos}) => {
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>
             </div>
             <div className="caixa-busca__resultados" id="resultados">
-                { resultados.length === 0 ? 
-                    <Resultado key={0}>Produto não encontrado</Resultado>
-                    : 
+                {resultados.length === 0 ? 
+                    <a className="caixa-busca__resultados__item" href="#null" key={0}>Produto não encontrado</a>
+                : 
                     resultados[0].nulo === true ? 
-                        '':    
-                        resultados.map((produto) => <Resultado key={produto.id || 0} link={produto.imagem_src}>{produto.nome}</Resultado>)}
+                        '': 
+                        
+                        resultados.map((produto) => <a className="caixa-busca__resultados__item" href={produto.imagem_src} key={produto.id || 0}>{produto.nome}</a>  )}
             </div>
         </div>
     )
