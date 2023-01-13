@@ -14,7 +14,6 @@
 }
 
 .botao--azul {
-
     background-color: var(--azul-100);
     color: var(--branco);
     transition: .1s;
@@ -25,25 +24,13 @@
     transition: .1s;
 }
 
-.botao--login {
-    height: 4.5rem;
-    padding: 0 clamp(1rem, 7vw, 6rem);
+.botao--transparente {
     border: solid 1px var(--azul-100);
     color: var(--azul-100);
     transition: .1s;
 }
 
-.botao--login:hover {
+.botao--transparente:hover {
     background-color: var(--azul-10);
     transition: .1s;
-}
-
-.botao--100vw {
-    width: 100%;
-}
-
-@media screen and (min-width: 720px) {
-    .botao--login {
-        padding: 0 clamp(1rem, 10vw, 6rem);
-    }
 }

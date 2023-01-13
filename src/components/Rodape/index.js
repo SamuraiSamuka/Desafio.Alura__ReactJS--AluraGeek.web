@@ -1,7 +1,6 @@
 import Formulario from '../Formulario'
 import Logo from '../Logo'
-import CampoTextArea from '../CampoTextArea'
-import CampoTexto from '../CampoTexto'
+import CampoInput from '../CampoInput'
 import Botao from '../Botao'
 import './Rodape.css'
 
@@ -24,15 +23,15 @@ const Rodape = () => {
                 </div>
                 <div className="contato-container saiba-mais__grid">
                     <Formulario titulo="Fale conosco">
-                        <CampoTexto>Nome</CampoTexto>
-                        <CampoTextArea></CampoTextArea>
+                        <CampoInput>Nome</CampoInput>
+                        <CampoInput type="textarea" maximo={250}>Escreva sua mensagem</CampoInput>
                         <Botao>Enviar mensagem</Botao>
                     </Formulario>
                 </div>
             </div>
             <div className="sobre container">
                 <p className="sobre__direito-autoral">Desenvolvido por Samuel</p>
-                <p className="sobre__ano">2021</p>
+                <p className="sobre__ano">2023</p>
             </div>
         </footer>
     )

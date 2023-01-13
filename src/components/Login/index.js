@@ -1,15 +1,19 @@
 import './Login.css'
 import Formulario from '../Formulario';
-import CampoTexto from '../CampoTexto';
+import CampoInput from '../CampoInput';
 import Botao from '../Botao';
 
 const Login = () => {
     return (
-        <div className='login-container container'>
+        <div className='formulario-container container'>
             <Formulario titulo="Iniciar Sessão">
-                <CampoTexto type="email">E-mail</CampoTexto>
-                <CampoTexto type="password">Senha</CampoTexto>
-                <Botao aparencia="100vw">Entrar</Botao>
+                <CampoInput type="email" required>E-mail</CampoInput>
+                <CampoInput type="password" minimo={6} required>Senha</CampoInput>
+                <Botao>Entrar</Botao>
+                <div className='login-links'>
+                    <a className='login-link'>Criar conta</a>
+                    <a className='login-link'>Esqueci minha senha</a>
+                </div>
             </Formulario>
         </div>
     )

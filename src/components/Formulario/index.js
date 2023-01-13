@@ -1,6 +1,3 @@
-import Botao from '../Botao'
-import CampoTextArea from '../CampoTextArea'
-import CampoTexto from '../CampoTexto'
 import './Formulario.css'
 
 const Formulario = ({titulo, children}) => {

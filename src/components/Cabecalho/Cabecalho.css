@@ -23,6 +23,11 @@
     margin-left: 25px;
 }
 
+.cabecalho .botao--transparente {
+    padding: 0 clamp(1rem, 7vw, 6rem);
+    height: 4.5rem;
+}
+
 
 @media screen and (min-width: 720px) {
     .cabecalho{
@@ -31,6 +36,10 @@
 
     .caixa-busca__lupa-mobile, .caixa-busca__close-mobile {
         display: none;
+    }
+
+    .cabecalho .botao--transparente {
+        padding: 0 clamp(1rem, 10vw, 6rem);
     }
 }
 

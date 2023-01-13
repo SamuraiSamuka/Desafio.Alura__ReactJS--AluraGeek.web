@@ -1,16 +1,30 @@
-.login-container .formulario {
-    margin: 35% 3%
+.login-links {
+    display: grid;
+    margin-top: 25px;
+    gap: 20px
+}
+
+.login-link {
+    text-align: center;
+    font-weight: 600;
+    color: var(--azul-100)
+}
+
+/* .login-container .formulario {
+    margin: 25% 3%
 }
 
 .login-container .formulario__titulo {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 15px;
 }
 
 .login-container .botao {
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
 
 @media screen and (min-width: 720px) {
     .login-container .formulario {
@@ -20,12 +34,22 @@
 
 @media screen and (min-width: 1020px) {
     .login-container .formulario {
-        margin: 15% 25%
+        margin: 9% 25%
     } 
+    
+    .login-container .formulario__titulo {
+        font-size: 22px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
     .login-container .formulario {
-        margin: 12% 30%
+        margin: 9% 30%
     } 
 }
+
+@media screen and (min-width: 2000px) {
+    .login-container .formulario {
+        margin: 11% 30%
+    } 
+} */
