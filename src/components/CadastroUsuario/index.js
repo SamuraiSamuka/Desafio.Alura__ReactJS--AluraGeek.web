@@ -4,15 +4,30 @@ import Formulario from '../Formulario'
 import './CadastroUsuario.css'
 
 const CadastroUsuario = () => {
-    const comparaSenhas = function (evento) {
-        let campo = evento.target
-        let senhaSecundaria = campo.value
-        let senhaPrimaria = document.querySelector('#senha').querySelector('.campo-texto__input').value
-        if(senhaPrimaria !== senhaSecundaria) {
-            campo.setCustomValitidity("As senhas são diferentes")
-            console.log(senhaPrimaria, senhaSecundaria)
-            console.log(campo.validity)
+    const verificaSenha = function (evento, verificaSeValido) {
+        const senhaSecundaria = evento.target
+        const senhaPrimaria = document.querySelector('#senha')
+        if(senhaSecundaria.value === senhaPrimaria.value) {
+            senhaSecundaria.setCustomValidity('')
+        } else {
+            senhaSecundaria.setCustomValidity("As senhas são diferentes")
         }
+        verificaSeValido(evento, "As senhas diferem")
+    }
+
+    const verificaIdade = function (evento, verificaSeValido){
+        const campoData = evento.target
+        const dataNascimento = new Date(campoData.value);
+        const dataAtual = new Date();
+        const dataMais18 = new Date(dataNascimento.getUTCFullYear() + 18, dataNascimento.getUTCMonth(), dataNascimento.getUTCDay())
+
+        if(dataAtual >= dataMais18){
+            campoData.setCustomValidity('')
+        }
+        else {
+            campoData.setCustomValidity("É nescessário ter 18 anos ou mais.")
+        }
+        verificaSeValido(evento, "Não é maior de idade")
     }
 
     return (
@@ -20,10 +35,10 @@ const CadastroUsuario = () => {
             <Formulario titulo="Cadastro de usuário">
                 <CampoInput type="radio" opcoes={["Cliente", "Lojista"]} required>Tipo de usuário:</CampoInput>
                 <CampoInput minimo="4" required>Nome completo</CampoInput>
-                <CampoInput type="date" required>Data de nascimento</CampoInput>
+                <CampoInput type="date" validacaoCustomizada={verificaIdade} required>Data de nascimento</CampoInput>
                 <CampoInput type="email" required>E-mail</CampoInput>
                 <CampoInput id="senha" minimo={6} required>Senha</CampoInput>
-                <CampoInput id="confirmaSenha" required onChange={comparaSenhas}>Confirme sua senha</CampoInput>
+                <CampoInput id="confirmaSenha" validacaoCustomizada={verificaSenha} required>Confirme sua senha</CampoInput>
                 <Botao type="submit">Cadastrar usuário</Botao>
             </Formulario>
         </div>
