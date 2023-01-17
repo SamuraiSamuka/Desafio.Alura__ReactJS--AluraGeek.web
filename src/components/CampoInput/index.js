@@ -1,7 +1,7 @@
 import './CampoInput.css'
 import Botao from '../Botao'
 
-const CampoInput = ({id, children, type, minimo, maximo, required, opcoes, addOpcao, validacaoCustomizada}) => {
+const CampoInput = ({id, children, type, minimo, maximo, required, onChange, validacaoCustomizada, opcoesLista, addOpcao}) => {
 
     function verificaSeValido (evento, mensagemErroCustomizada) {
         const campoInput = evento.target
@@ -45,14 +45,15 @@ const CampoInput = ({id, children, type, minimo, maximo, required, opcoes, addOp
         return mensagem
     }
 
+    
     return (
         type === "select"?
-            <div id={id} className='campo-selecao'>
+            <div className='campo-selecao'>
                 <div className="campo">
                     <label className="campo__label">{children}</label>
-                    <select className="campo__input" required={required}>
+                    <select className="campo__input" id={id} required={required}>
                         <option key={0}></option>
-                        {opcoes.map((item, i) =>{
+                        {opcoesLista.map((item, i) =>{
                             return <option key={item}>{item}</option>
                         })}
                     </select>
@@ -81,7 +82,7 @@ const CampoInput = ({id, children, type, minimo, maximo, required, opcoes, addOp
         : type === "radio" ?
             <div id={id} className='campo-radio'>
                 <label className='radio-titulo'>{children}</label>
-                {opcoes.map(item => {
+                {opcoesLista.map(item => {
                     return (
                         <div className='radio-opcao' key={item}>
                             <input name="radio-input" type="radio" id={"radio-".concat(item)} required={required}></input>
@@ -97,11 +98,12 @@ const CampoInput = ({id, children, type, minimo, maximo, required, opcoes, addOp
                 <input 
                     className="campo__input" 
                     id={id} 
-                    type={type || "text"} 
+                    type={type || "text"}
                     onBlur={(evento) => {
                         verificaSeValido(evento); 
                         if(validacaoCustomizada){ validacaoCustomizada(evento, verificaSeValido) };
-                    }} 
+                    }}
+                    onChange={evento => onChange? onChange(evento): '' }
                     minLength={minimo} 
                     maxLength={maximo} 
                     required={required}/>

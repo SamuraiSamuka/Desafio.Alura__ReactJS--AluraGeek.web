@@ -174,5 +174,16 @@
     "consoles",
     "roupas",
     "diversos"
+  ],
+  "usuarios": [
+    {
+      "id": 0,
+      "nomeCompleto": "Samuel Silva",
+      "tipoUsuario": "1",
+      "dataNascimento": "01/01/2001",
+      "email": "samuel.carvalo.dev@gmail.com",
+      "senha": "EOQueTemosPraHoje",
+      "Status": "Trust me, I'm a programmer"
+    }
   ]
 }

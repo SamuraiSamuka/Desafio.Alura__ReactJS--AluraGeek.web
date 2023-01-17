@@ -33,7 +33,7 @@ const CadastroUsuario = () => {
     return (
         <div className='formulario-container container'>
             <Formulario titulo="Cadastro de usuário">
-                <CampoInput type="radio" opcoes={["Cliente", "Lojista"]} required>Tipo de usuário:</CampoInput>
+                <CampoInput type="radio" opcoesLista={["Cliente", "Lojista"]} required>Tipo de usuário:</CampoInput>
                 <CampoInput minimo="4" required>Nome completo</CampoInput>
                 <CampoInput type="date" validacaoCustomizada={verificaIdade} required>Data de nascimento</CampoInput>
                 <CampoInput type="email" required>E-mail</CampoInput>

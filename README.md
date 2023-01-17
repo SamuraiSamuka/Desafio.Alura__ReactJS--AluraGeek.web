@@ -14,8 +14,10 @@ Veja aqui [o resultado final](https://challenge-front-5-alura-geek-react.vercel.
 * Boas práticas: BEM e SMACSS
 * React_js
 
-# O que aprendi desenvolvendo esse projeto
+# Habilidades que utilizei/aprendi nesse projeto
 
 * Criar componentes com React.
 * Utilizar funções assíncronas para fazer requisições de dados do banco de dados.
 * Mockar dados utilizando o json-server.
+* Validar formularios:
+    * Utilizar o validityState
