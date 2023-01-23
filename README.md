@@ -11,13 +11,17 @@ Veja aqui [o resultado final](https://challenge-front-5-alura-geek-react.vercel.
 * HTML
 * CSS
 * Javascript
-* Boas práticas: BEM e SMACSS
+* Boas práticas: BEM
 * React_js
+* Bibliotecas:
+ * uuid - para geração de IDs únicos.
 
 # Habilidades que utilizei/aprendi nesse projeto
 
-* Criar componentes com React.
-* Utilizar funções assíncronas para fazer requisições de dados do banco de dados.
-* Mockar dados utilizando o json-server.
+* Criei componentes funcionais com React:
+    * Criei componentes controlados com useState()
+* Uso de Hooks:
+    * useState;
+    * useEffect;
 * Validar formularios:
-    * Utilizar o validityState
+    * Utilizando o validityState;

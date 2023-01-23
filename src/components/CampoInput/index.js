@@ -1,7 +1,7 @@
 import './CampoInput.css'
 import Botao from '../Botao'
 
-const CampoInput = ({id, children, type, minimo, maximo, required, onChange, validacaoCustomizada, opcoesLista, addOpcao}) => {
+const CampoInput = ({id, type, children, valor, minimo, maximo, required, aoAlterado, validacaoCustomizada, opcoesLista, addOpcao}) => {
 
     function verificaSeValido (evento, mensagemErroCustomizada) {
         const campoInput = evento.target
@@ -51,7 +51,7 @@ const CampoInput = ({id, children, type, minimo, maximo, required, onChange, val
             <div className='campo-selecao'>
                 <div className="campo">
                     <label className="campo__label">{children}</label>
-                    <select className="campo__input" id={id} required={required}>
+                    <select className="campo__input" id={id} onChange={evento => aoAlterado? aoAlterado(evento): '' } value={valor} required={required}>
                         <option key={0}></option>
                         {opcoesLista.map((item, i) =>{
                             return <option key={item}>{item}</option>
@@ -76,6 +76,8 @@ const CampoInput = ({id, children, type, minimo, maximo, required, onChange, val
                     placeholder={children}
                     minLength={minimo}
                     maxLength={maximo}
+                    onChange={evento => aoAlterado? aoAlterado(evento): '' }
+                    value={valor}
                     required={required}></textarea>
             </div>
 
@@ -103,9 +105,10 @@ const CampoInput = ({id, children, type, minimo, maximo, required, onChange, val
                         verificaSeValido(evento); 
                         if(validacaoCustomizada){ validacaoCustomizada(evento, verificaSeValido) };
                     }}
-                    onChange={evento => onChange? onChange(evento): '' }
+                    onChange={evento => aoAlterado? aoAlterado(evento): '' }
                     minLength={minimo} 
-                    maxLength={maximo} 
+                    maxLength={maximo}
+                    value={valor}
                     required={required}/>
                 <span className="material-symbols-outlined campo__erro__icone">error</span>
                 <span className='campo__erro'></span>
