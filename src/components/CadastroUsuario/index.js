@@ -23,6 +23,10 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
         verificaSeValido(evento, "As senhas diferem")
     }
 
+    const verificaEmail = function () {
+        
+    }
+
     const verificaIdade = function (evento, verificaSeValido){
         const campoData = evento.target
         const dataNascimento = new Date(campoData.value);
@@ -67,9 +71,10 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
                     required
                 >Data de nascimento</CampoInput>
                 <CampoInput 
-                    type="email" 
+                    type="email"
                     aoAlterado={evento => {setEmailUsuario(evento.target.value)}}
                     valor={emailUsuario}
+                    validacaoCustomizada={verificaEmail}
                     required
                 >E-mail</CampoInput>
                 <CampoInput 

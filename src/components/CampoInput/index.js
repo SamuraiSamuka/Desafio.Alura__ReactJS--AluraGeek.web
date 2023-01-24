@@ -1,7 +1,7 @@
 import './CampoInput.css'
 import Botao from '../Botao'
 
-const CampoInput = ({id, type, children, valor, minimo, maximo, required, aoAlterado, validacaoCustomizada, opcoesLista, addOpcao}) => {
+const CampoInput = ({id, type, children, valor, minimo, maximo, required, aoAlterado, validacaoCustomizada, opcoesLista, addOpcao, icone, comportamentoIcone}) => {
 
     function verificaSeValido (evento, mensagemErroCustomizada) {
         const campoInput = evento.target
@@ -110,6 +110,7 @@ const CampoInput = ({id, type, children, valor, minimo, maximo, required, aoAlte
                     maxLength={maximo}
                     value={valor}
                     required={required}/>
+                <span className="material-symbols-outlined campo__icone" onClick={evento => comportamentoIcone(evento)}>{icone}</span>
                 <span className="material-symbols-outlined campo__erro__icone">error</span>
                 <span className='campo__erro'></span>
             </div>

@@ -41,6 +41,13 @@
 }
 
 
+.campo__icone{
+    margin: 0 5px 5px 5px;
+    color: var(--preto-50);
+    cursor: pointer;
+}
+
+
 
 /* Select */
 .campo-selecao {

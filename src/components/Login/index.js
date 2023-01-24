@@ -14,6 +14,18 @@ const Login = ({ aoLogar }) => {
         aoLogar({email: email, senha: senha})
     }
 
+    function mostrarEsconderSenha(evento){
+        let icone = evento.target
+        let campoInput = icone.previousSibling
+        if(campoInput.type === "password"){
+            campoInput.type = "text"
+            icone.style.color = "#606060"
+        } else if(campoInput.type === "text"){
+            campoInput.type = "password"
+            icone.style.color = "#aaaaaa"
+        }
+    }
+
     return (
         <div className='formulario-container container'>
             <Formulario titulo="Iniciar Sessão" onsubmit={aoSubmeter}>
@@ -24,10 +36,12 @@ const Login = ({ aoLogar }) => {
                     required
                 >E-mail</CampoInput>
                 <CampoInput 
-                    type="password" 
-                    minimo={6}
+                    type="password"
+                    icone="visibility"
+                    comportamentoIcone={mostrarEsconderSenha}
                     aoAlterado={evento => {setSenha(evento.target.value)}}
                     valor={senha} 
+                    minimo={6}
                     required
                 >Senha</CampoInput>
                 <Botao>Entrar</Botao>

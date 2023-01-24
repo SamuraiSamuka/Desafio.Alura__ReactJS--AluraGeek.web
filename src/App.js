@@ -63,7 +63,10 @@ function App() {
     }
   ])
 
-  const [login, setLogin] = useState({logado:false, usuario: {}})
+  const [login, setLogin] = useState({
+    logado:false, 
+    usuario: {}
+  })
   
   function salvaProduto(produto){
     produto = {id: uuidv4(), ...produto, data_criacao: new Date()}
@@ -75,15 +78,16 @@ function App() {
     if(emailUtilizado.length === 0){
       usuario = {id: uuidv4(), ...usuario, data_cadastro: new Date()}
       setUsuarios([...usuarios, usuario])
+      alert("cadastrado com sucesso!")
     } else {
       alert("Email já utilizado!")
     }
   }
   
-  function logar(login){
-    let match = usuarios.filter(usuario => usuario.email === login.email)
+  function logar(loginUsuario){
+    let match = usuarios.filter(usuario => usuario.email === loginUsuario.email)
     if(match.length === 1){
-      if(match[0].senha === login.senha){
+      if(match[0].senha === loginUsuario.senha){
         setLogin({logado: true, usuario: match[0]})
         if(login.logado) {alert("Logado!")}
       } else {
