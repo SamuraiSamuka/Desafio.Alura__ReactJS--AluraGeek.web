@@ -98,12 +98,24 @@ function App() {
     }
   }
 
+  function validaEmail (evento, verificaSeValido) {
+    const campoInput = evento.target
+    const emailAVerificar = campoInput.value
+    const match = usuarios.filter(usuario => usuario.email === emailAVerificar)
+    if(match.length > 0) {
+      campoInput.setCustomValidity('Este e-mail já está cadastrado.')
+    } else {
+      campoInput.setCustomValidity('')
+    }
+    verificaSeValido(evento, "E-mail já utilizado.")
+  }
+
   return (
     <div className="App">
       <Cabecalho produtos={produtos}/>
       <main className='principal'>
         {/* <CadastroProduto aoProdutoCadastrado={salvaProduto}/> */}
-        <CadastroUsuario aoUsuarioCadastrado={salvaUsuario}></CadastroUsuario>
+        <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
         <Login aoLogar={logar}></Login>
         {/* <SecaoProduto produtos={produtos.sort((a, b)=>{
           if(a.data_criacao > b.data_criacao){

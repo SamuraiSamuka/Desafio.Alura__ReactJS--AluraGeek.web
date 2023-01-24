@@ -4,7 +4,7 @@ import CampoInput from '../CampoInput'
 import Formulario from '../Formulario'
 import './CadastroUsuario.css'
 
-const CadastroUsuario = ({aoUsuarioCadastrado}) => {
+const CadastroUsuario = ({aoUsuarioCadastrado, verificaEmail}) => {
 
     const [nomeUsuario, setNomeUsuario] = useState('')
     const [tipoUsuario, setTipoUsuario] = useState('')
@@ -12,7 +12,7 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
     const [emailUsuario, setEmailUsuario] = useState('')
     const [senhaUsuario, setSenhaUsuario] = useState('')
 
-    const verificaSenha = function (evento, verificaSeValido) {
+    const confirmaSenha = function (evento, verificaSeValido) {
         const senhaSecundaria = evento.target
         const senhaPrimaria = document.querySelector('#senha')
         if(senhaSecundaria.value === senhaPrimaria.value) {
@@ -21,10 +21,6 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
             senhaSecundaria.setCustomValidity("As senhas são diferentes")
         }
         verificaSeValido(evento, "As senhas diferem")
-    }
-
-    const verificaEmail = function () {
-        
     }
 
     const verificaIdade = function (evento, verificaSeValido){
@@ -45,6 +41,19 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
     function aoSalvar(evento){
         evento.preventDefault()
         aoUsuarioCadastrado({nome: nomeUsuario, tipo: tipoUsuario, nascimento: nascimentoUsuario, email: emailUsuario, senha: senhaUsuario })
+    }
+
+    function verificaSenha(evento, verificaSeValido){
+        const campo = evento.target
+        const senha = campo.value
+        const regex = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$&*])[0-9a-zA-Z!@#$&*]{8,}$/
+        let valido = regex.test(senha)
+        if(valido){
+            campo.setCustomValidity('')
+        } else {
+            campo.setCustomValidity('A senha precisa ter no mínimo 8 caracteres: 1 letra minúscula, 1 letra maiúscula, 1 número e 1 caractere especial')
+        }
+        verificaSeValido(evento, "A senha não atende os requisitos.")
     }
 
     return (
@@ -80,13 +89,14 @@ const CadastroUsuario = ({aoUsuarioCadastrado}) => {
                 <CampoInput 
                     id="senha" 
                     minimo={6} 
-                    aoAlterado={evento => {setSenhaUsuario(evento.target.value)}}
+                    aoAlterado={evento => { setSenhaUsuario(evento.target.value) }}
+                    validacaoCustomizada={verificaSenha}
                     valor={senhaUsuario}
                     required
                 >Senha</CampoInput>
                 <CampoInput 
                     id="confirmaSenha" 
-                    validacaoCustomizada={verificaSenha} 
+                    validacaoCustomizada={confirmaSenha} 
                     required
                 >Confirme sua senha</CampoInput>
                 <Botao type="submit">Cadastrar usuário</Botao>

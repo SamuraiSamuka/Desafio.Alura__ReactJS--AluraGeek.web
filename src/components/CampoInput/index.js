@@ -1,7 +1,7 @@
 import './CampoInput.css'
 import Botao from '../Botao'
 
-const CampoInput = ({id, type, children, valor, minimo, maximo, required, aoAlterado, validacaoCustomizada, opcoesLista, addOpcao, icone, comportamentoIcone}) => {
+const CampoInput = ({id, type, children, valor, minimo, maximo, required, validacaoCustomizada, aoAlterado, opcoesLista, addOpcao, icone, comportamentoIcone}) => {
 
     function verificaSeValido (evento, mensagemErroCustomizada) {
         const campoInput = evento.target
