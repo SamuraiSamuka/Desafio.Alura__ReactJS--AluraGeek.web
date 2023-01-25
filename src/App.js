@@ -7,7 +7,7 @@ import Rodape from './components/Rodape';
 // import SecaoProduto from './components/SecaoProduto';
 // import ProdutoDetalhado from './components/ProdutoDetalhado';
 import Login from './components/Login';
-// import CadastroProduto from './components/CadastroProduto';
+import CadastroProduto from './components/CadastroProduto';
 import CadastroUsuario from './components/CadastroUsuario';
 // import EsqueciSenha from './components/EsqueciSenha';
 
@@ -114,7 +114,7 @@ function App() {
     <div className="App">
       <Cabecalho produtos={produtos}/>
       <main className='principal'>
-        {/* <CadastroProduto aoProdutoCadastrado={salvaProduto}/> */}
+        <CadastroProduto aoProdutoCadastrado={salvaProduto}/>
         <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
         <Login aoLogar={logar}></Login>
         {/* <SecaoProduto produtos={produtos.sort((a, b)=>{

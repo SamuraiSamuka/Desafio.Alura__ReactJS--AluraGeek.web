@@ -11,24 +11,13 @@ const CadastroUsuario = ({aoUsuarioCadastrado, verificaEmail}) => {
     const [nascimentoUsuario, setNascimentoUsuario] = useState('')
     const [emailUsuario, setEmailUsuario] = useState('')
     const [senhaUsuario, setSenhaUsuario] = useState('')
-
-    const confirmaSenha = function (evento, verificaSeValido) {
-        const senhaSecundaria = evento.target
-        const senhaPrimaria = document.querySelector('#senha')
-        if(senhaSecundaria.value === senhaPrimaria.value) {
-            senhaSecundaria.setCustomValidity('')
-        } else {
-            senhaSecundaria.setCustomValidity("As senhas são diferentes")
-        }
-        verificaSeValido(evento, "As senhas diferem")
-    }
-
+    
     const verificaIdade = function (evento, verificaSeValido){
         const campoData = evento.target
         const dataNascimento = new Date(campoData.value);
         const dataAtual = new Date();
         const dataMais18 = new Date(dataNascimento.getUTCFullYear() + 18, dataNascimento.getUTCMonth(), dataNascimento.getUTCDay())
-
+        
         if(dataAtual >= dataMais18){
             campoData.setCustomValidity('')
         }
@@ -37,12 +26,7 @@ const CadastroUsuario = ({aoUsuarioCadastrado, verificaEmail}) => {
         }
         verificaSeValido(evento, "Não é maior de idade")
     }
-
-    function aoSalvar(evento){
-        evento.preventDefault()
-        aoUsuarioCadastrado({nome: nomeUsuario, tipo: tipoUsuario, nascimento: nascimentoUsuario, email: emailUsuario, senha: senhaUsuario })
-    }
-
+    
     function verificaSenha(evento, verificaSeValido){
         const campo = evento.target
         const senha = campo.value
@@ -54,6 +38,22 @@ const CadastroUsuario = ({aoUsuarioCadastrado, verificaEmail}) => {
             campo.setCustomValidity('A senha precisa ter no mínimo 8 caracteres: 1 letra minúscula, 1 letra maiúscula, 1 número e 1 caractere especial')
         }
         verificaSeValido(evento, "A senha não atende os requisitos.")
+    }
+    
+    const confirmaSenha = function (evento, verificaSeValido) {
+        const senhaSecundaria = evento.target
+        const senhaPrimaria = document.querySelector('#senha')
+        if(senhaSecundaria.value === senhaPrimaria.value) {
+            senhaSecundaria.setCustomValidity('')
+        } else {
+            senhaSecundaria.setCustomValidity("As senhas são diferentes")
+        }
+        verificaSeValido(evento, "As senhas diferem")
+    }
+    
+    function aoSalvar(evento){
+        evento.preventDefault()
+        aoUsuarioCadastrado({nome: nomeUsuario, tipo: tipoUsuario, nascimento: nascimentoUsuario, email: emailUsuario, senha: senhaUsuario })
     }
 
     return (

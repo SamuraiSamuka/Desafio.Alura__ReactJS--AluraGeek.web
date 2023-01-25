@@ -11,15 +11,32 @@ const CadastroProduto = ({aoProdutoCadastrado}) => {
     const [precoProduto, setPrecoProduto] = useState('')
     const [imagemProduto, setImagemProduto] = useState('')
     const [descricaoProduto, setDescricaoProduto] = useState('')
+    
+    function limpaPattern(valorInicial){
+        const valorLimpo = valorInicial.replace(/\D+/, "").replace(/[,. a-zA-Z$!@#%&*-+]/, "")
+        return valorLimpo
+    }
 
     function aplicaPattern(evento){
         const campo = evento.target
         const valor = campo.value
-        const valorLimpo = valor.replace(/\D+/, "").replace(/[,]/, "").replace(/\s/,"")
-        let valorTamanhoAdequado = valorLimpo
+        const numerosApenas = limpaPattern(valor)
+        let valorTamanhoAdequado = numerosApenas.length === 1? "0".concat(numerosApenas): numerosApenas
         const valorFormatado = valorTamanhoAdequado.replace(/(0*)(\d*)(\d{2}$)/,"R$ $2,$3")
         campo.value = valorFormatado
+
         return valorFormatado
+    }
+
+    function verificaPreco(evento, verificaSeValido){
+        const campo = evento.target
+        const valor = campo.value
+        if(valor === "R$ ,00"){
+            campo.setCustomValidity("O preço tem de ser maior do que R$ 0,00")
+        } else {
+            campo.setCustomValidity('')
+        }
+        verificaSeValido(evento, "O preço não pode estar zerado")
     }
 
     function aoSalvar(evento){
@@ -50,6 +67,8 @@ const CadastroProduto = ({aoProdutoCadastrado}) => {
                 <CampoInput 
                     id="produtoPreco" 
                     aoAlterado={evento => { setPrecoProduto(aplicaPattern(evento)) }}
+                    validacaoCustomizada={verificaPreco}
+                    minimo='2'
                     valor={precoProduto}
                     required
                 >Preço do produto</CampoInput>
