@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Cabecalho from './components/Cabecalho';
 import Rodape from './components/Rodape';
-// import Banner from './components/Banner';
-// import SecaoProduto from './components/SecaoProduto';
+import Banner from './components/Banner';
+import SecaoProduto from './components/SecaoProduto';
 // import ProdutoDetalhado from './components/ProdutoDetalhado';
-import Login from './components/Login';
-import CadastroProduto from './components/CadastroProduto';
-import CadastroUsuario from './components/CadastroUsuario';
+// import Login from './components/Login';
+// import CadastroProduto from './components/CadastroProduto';
+// import CadastroUsuario from './components/CadastroUsuario';
 // import EsqueciSenha from './components/EsqueciSenha';
 
 function App() {
@@ -113,10 +113,12 @@ function App() {
   return (
     <div className="App">
       <Cabecalho produtos={produtos}/>
+      <Banner></Banner>
       <main className='principal'>
-        <CadastroProduto aoProdutoCadastrado={salvaProduto}/>
+        <SecaoProduto produtos={produtos}></SecaoProduto>
+        {/* <CadastroProduto aoProdutoCadastrado={salvaProduto}/>
         <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
-        <Login aoLogar={logar}></Login>
+        <Login aoLogar={logar}></Login> */}
         {/* <SecaoProduto produtos={produtos.sort((a, b)=>{
           if(a.data_criacao > b.data_criacao){
             return -1

@@ -21,7 +21,7 @@ const CadastroProduto = ({aoProdutoCadastrado}) => {
         const campo = evento.target
         const valor = campo.value
         const numerosApenas = limpaPattern(valor)
-        let valorTamanhoAdequado = numerosApenas.length === 1? "0".concat(numerosApenas): numerosApenas
+        let valorTamanhoAdequado = numerosApenas
         const valorFormatado = valorTamanhoAdequado.replace(/(0*)(\d*)(\d{2}$)/,"R$ $2,$3")
         campo.value = valorFormatado
 
@@ -31,12 +31,12 @@ const CadastroProduto = ({aoProdutoCadastrado}) => {
     function verificaPreco(evento, verificaSeValido){
         const campo = evento.target
         const valor = campo.value
-        if(valor === "R$ ,00"){
-            campo.setCustomValidity("O preço tem de ser maior do que R$ 0,00")
+        if(valor === "R$ ,00" || valor.length === 1){
+            campo.setCustomValidity("O preço tem de ser maior do que R$ 0,00 e ter mais de um caractere")
         } else {
             campo.setCustomValidity('')
         }
-        verificaSeValido(evento, "O preço não pode estar zerado")
+        verificaSeValido(evento, "Preço inválido!")
     }
 
     function aoSalvar(evento){
