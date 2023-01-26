@@ -115,7 +115,9 @@ function App() {
       <Cabecalho produtos={produtos}/>
       <Banner></Banner>
       <main className='principal'>
-        <SecaoProduto produtos={produtos}></SecaoProduto>
+        <SecaoProduto produtos={produtos} categoria="star_wars">Star Wars</SecaoProduto>
+        <SecaoProduto produtos={produtos} categoria="star_wars">Diversos</SecaoProduto>
+        <SecaoProduto produtos={produtos} categoria="roupas">Roupas</SecaoProduto>
         {/* <CadastroProduto aoProdutoCadastrado={salvaProduto}/>
         <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
         <Login aoLogar={logar}></Login> */}
