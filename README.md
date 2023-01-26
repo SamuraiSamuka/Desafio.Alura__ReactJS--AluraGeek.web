@@ -5,12 +5,11 @@ O alura Geek é uma loja virtual de produtos geeks. Esse é o projeto que eu des
 | ------------------------  | --- |
 | :sparkles: Nome           | **Alura Geek**
 | :label: Tecnologias       | HTML, CSS, Javascript, ReactJs
-| :link: Bibliotecas        | uuid, piii
 | :rocket: Deploy           | [Alura Geek](https://challenge-front-5-alura-geek-react.vercel.app/)
 | :fire: Challenge    | [5ª edição do desafio Alura front-end](https://www.alura.com.br/challenges/front-end-5//semana-01-criando-loja-interface-cliente)
-| :mortar_board: Certificado| [Ainda não concluído]()
+| :link: Bibliotecas        | uuid, piii
 
-![](https://github.com/SamuraiSamuka/Challenge_Front-5--Alura_Geek_React/tree/main/public/AluraGeek.png#vitrinedev)
+![](https://github.com/SamuraiSamuka/Challenge_Front-5--Alura_Geek_React/blob/main/public/AluraGeek.png?raw=true#vitrinedev)
 
 # Sobre o Desafio
 O desafio é desenvolver o projeto a partir do seguinte [design do figma](https://www.figma.com/file/fR9qvy3gU53s2q5efeMpy9/AluraGeek---Challenge?node-id=0%3A1) e dos [cards do trelo](https://trello.com/b/YahtquUC/challenge-front-end-semana-1).
