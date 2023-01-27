@@ -5,7 +5,7 @@ O alura Geek é uma loja virtual de produtos geeks. Esse é o projeto que eu des
 | ------------------------  | --- |
 | :sparkles: Nome           | **Alura Geek**
 | :label: Tecnologias       | HTML, CSS, Javascript, ReactJs
-| :rocket: Deploy           | [Alura Geek](https://challenge-front-5-alura-geek-react.vercel.app/)
+| :rocket: Deploy           | [Alura Geek](https://alura-geek-reactjs.vercel.app/)
 | :fire: Challenge    | [5ª edição do desafio Alura front-end](https://www.alura.com.br/challenges/front-end-5//semana-01-criando-loja-interface-cliente)
 | :link: Bibliotecas        | uuid, piii
 
