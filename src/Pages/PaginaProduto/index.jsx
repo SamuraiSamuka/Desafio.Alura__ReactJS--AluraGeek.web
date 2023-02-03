@@ -7,7 +7,7 @@ export default function PaginaProduto({produtos}) {
   const produto = produtos[2]
   return (
     <>
-      <Cabecalho />
+      <Cabecalho  produtos={produtos}/>
       <ProdutoDetalhado 
         nome={produto.nome}
         preco={produto.preco}

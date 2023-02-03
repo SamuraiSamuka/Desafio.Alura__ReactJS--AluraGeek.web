@@ -1,7 +1,7 @@
 import Botao from '../Botao'
 import './Banner.css'
 
-const Banner = (props) => {
+const Banner = () => {
 
     const descerSuavePara = (id) => {
         const destino = document.querySelector(id).offsetTop

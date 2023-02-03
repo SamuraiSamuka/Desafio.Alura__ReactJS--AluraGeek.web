@@ -6,7 +6,7 @@ import Rodape from "components/Rodape";
 export default function PaginaCadastroProduto({salvaProduto, produtos, categorias}) {
   return (
     <>
-        <Cabecalho />
+        <Cabecalho  produtos={produtos}/>
         <main className='principal'>
           <CadastroProduto aoProdutoCadastrado={salvaProduto} categorias={categorias}/>
           <SecaoProduto produtos={produtos.sort((a, b)=>{

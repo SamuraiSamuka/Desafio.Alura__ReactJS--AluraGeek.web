@@ -6,6 +6,7 @@ import LandingPage from './Pages/LandingPage';
 import PaginaProduto from 'Pages/PaginaProduto';
 import PaginaCadastroUsuario from 'Pages/PaginaCadastroUsuario';
 import PaginaErro404 from 'Pages/PaginaErro404';
+import PaginaRecuperarSenha from 'Pages/PaginaRecuperarSenha';
 // import PaginaCadastroProduto from 'Pages/PaginaCadastroProduto';
 // import PaginaLogin from 'Pages/PaginaLogin';
 // import ProdutoDetalhado from './components/ProdutoDetalhado';
@@ -95,7 +96,8 @@ function App() {
       {/* <PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/> */}
       {/* <PaginaLogin produtos={produtos} aoLogar={logar}/> */}
       {/* <PaginaCadastroUsuario produtos={produtos} aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}/> */}
-      <PaginaErro404 produtos={produtos}/>
+      {/* <PaginaErro404 produtos={produtos}/> */}
+      <PaginaRecuperarSenha produtos={produtos}/>
     </div>
   );
 }
