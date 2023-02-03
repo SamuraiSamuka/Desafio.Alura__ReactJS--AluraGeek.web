@@ -42,7 +42,7 @@
 
 
 .campo__icone{
-    margin: 0 5px 5px 5px;
+    margin: 13px 0px 5px 5px;
     color: var(--preto-50);
     cursor: pointer;
 }
@@ -56,13 +56,38 @@
     gap: 7px;
 }
 
-.campo-selecao .botao {
+.campo-selecao .botao, .campo-selecao-addOpcao .botao {
     width: fit-content;
     height: 5.8rem;
     padding: 5px 14px;
     
     border: none;
     border-bottom: solid 2px var(--preto-25);
+    cursor: pointer;
+}
+
+.campo-selecao__adicionar-opcao {
+    transition: .1s;
+}
+
+.rotate45{
+    transform: rotate(-45deg);
+    transition: .1s;
+}
+
+.campo-selecao-addOpcao {
+    display: flex;
+    padding: 0 10px;
+    margin-top: 5px;
+}
+
+.campo-selecao-addOpcao .campo{
+    background-color: var(--cinza);
+}
+
+.campo-selecao-addOpcao .botao--cinza {
+    background-color: var(--cinza);
+    margin-left: 7px;
 }
 
 
@@ -132,3 +157,8 @@
         color: rgb(70, 70, 70); 
     }
 }
+
+
+.dont-show {
+    display: none;
+  }

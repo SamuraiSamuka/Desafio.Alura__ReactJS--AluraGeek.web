@@ -11,7 +11,8 @@ const Login = ({ aoLogar }) => {
 
     function aoSubmeter(evento){
         evento.preventDefault()
-        aoLogar({email: email, senha: senha})
+        let resposta = aoLogar({email: email, senha: senha})
+        alert(resposta)
     }
 
     function mostrarEsconderSenha(evento){

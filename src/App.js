@@ -1,55 +1,31 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import Cabecalho from './components/Cabecalho';
-import Rodape from './components/Rodape';
-import Banner from './components/Banner';
-import SecaoProduto from './components/SecaoProduto';
+import dados from './db.json'
+import LandingPage from './Pages/LandingPage';
+import PaginaProduto from 'Pages/PaginaProduto';
+import PaginaCadastroUsuario from 'Pages/PaginaCadastroUsuario';
+import PaginaErro404 from 'Pages/PaginaErro404';
+// import PaginaCadastroProduto from 'Pages/PaginaCadastroProduto';
+// import PaginaLogin from 'Pages/PaginaLogin';
 // import ProdutoDetalhado from './components/ProdutoDetalhado';
 // import Login from './components/Login';
 // import CadastroProduto from './components/CadastroProduto';
 // import CadastroUsuario from './components/CadastroUsuario';
 // import EsqueciSenha from './components/EsqueciSenha';
-
+console.log(dados.produtos)
 function App() {
-  const [produtos, setProdutos] = useState([
-    {
-      id: uuidv4(),
-      nome: "Caneca stormer trooper",
-      preco: "R$ 60,00",
-      imagem_src: "https://http2.mlstatic.com/D_NQ_NP_983755-MLB52879024309_122022-O.webp",
-      categoria: "star_wars",
-      descricao: "Caneca estilizada, temática star wars.",
-      data_criacao: new Date()
-    },
-    {
-      id: uuidv4(),
-      nome: "Pedestal Darth vader",
-      preco: "R$ 84,90",
-      imagem_src: "https://http2.mlstatic.com/D_NQ_NP_809702-MLB51346188833_082022-O.webp",
-      categoria: "star_wars",
-      descricao: "Luminária Abajur Darth Vader Star Wars Personalizada C/ Nome",
-      data_criacao: new Date()
-    },
-    {
-      id: uuidv4(),
-      nome: "Boneco Yoda",
-      preco: "R$ 69,00",
-      imagem_src: "https://http2.mlstatic.com/D_NQ_NP_710970-MLB49580721415_042022-W.webp",
-      categoria: "star_wars",
-      descricao: "Boneco Action Figure Mestre Yoda Star Wars 12 Cm",
-      data_criacao: new Date()
-    },
-    {
-      id: uuidv4(),
-      nome: "Boneco Stoomer trooper",
-      preco: "R$ 881,00",
-      imagem_src: "https://http2.mlstatic.com/D_NQ_NP_800791-MLB46159555870_052021-O.webp",
-      categoria: "star_wars",
-      descricao: "Boneco Storm Trooper Star Wars Gigante 40cm - Mimo Toys",
-      data_criacao: new Date()
-    }
-  ])
+  
+  const produtosIniciais = dados.produtos.map(produto => {
+    produto = {id: uuidv4(), ...produto, data_criacao: new Date()}
+    return produto
+  })
+
+  console.log(produtosIniciais[0].categoria === "star wars")
+
+  const [produtos, setProdutos] = useState([...produtosIniciais])
+  
+  const [categorias, setCategorias] = useState([...new Set(produtos.map(produto=>produto.categoria))])
 
   const [usuarios, setUsuarios] = useState([
     {
@@ -86,16 +62,18 @@ function App() {
   
   function logar(loginUsuario){
     let match = usuarios.filter(usuario => usuario.email === loginUsuario.email)
+    let resposta = ""
     if(match.length === 1){
       if(match[0].senha === loginUsuario.senha){
         setLogin({logado: true, usuario: match[0]})
-        if(login.logado) {alert("Logado!")}
+        if(login.logado) {resposta = "Logado!"}
       } else {
-        alert("Senha incorreta!")
+        resposta = "Senha incorreta!"
       }
     } else {
-      alert("Email não encontrado!")
+      resposta = "Email não encontrado!"
     }
+    return resposta
   }
 
   function validaEmail (evento, verificaSeValido) {
@@ -112,26 +90,12 @@ function App() {
 
   return (
     <div className="App">
-      <Cabecalho produtos={produtos}/>
-      <Banner></Banner>
-      <main className='principal'>
-        <SecaoProduto produtos={produtos} categoria="star_wars">Star Wars</SecaoProduto>
-        <SecaoProduto produtos={produtos} categoria="star_wars">Diversos</SecaoProduto>
-        <SecaoProduto produtos={produtos} categoria="roupas">Roupas</SecaoProduto>
-        {/* <CadastroProduto aoProdutoCadastrado={salvaProduto}/>
-        <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
-        <Login aoLogar={logar}></Login> */}
-        {/* <SecaoProduto produtos={produtos.sort((a, b)=>{
-          if(a.data_criacao > b.data_criacao){
-            return -1
-          }
-          if(a.data_criacao < b.data_criacao){
-            return 1
-          }
-          return 0
-        })}>Adicionados recentemente</SecaoProduto> */}
-      </main>
-      <Rodape />
+      {/* <LandingPage produtos={produtos}/> */}
+      {/* <PaginaProduto produtos={produtos}/> */}
+      {/* <PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/> */}
+      {/* <PaginaLogin produtos={produtos} aoLogar={logar}/> */}
+      {/* <PaginaCadastroUsuario produtos={produtos} aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}/> */}
+      <PaginaErro404 produtos={produtos}/>
     </div>
   );
 }

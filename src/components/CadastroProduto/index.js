@@ -4,7 +4,7 @@ import CampoInput from '../CampoInput'
 import Formulario from '../Formulario'
 import './CadastroProduto.css'
 
-const CadastroProduto = ({aoProdutoCadastrado}) => {
+const CadastroProduto = ({aoProdutoCadastrado, categorias}) => {
 
     const [nomeProduto, setNomeProduto] = useState('')
     const [categoriaProduto, setCategoriaProduto] = useState('')
@@ -58,7 +58,7 @@ const CadastroProduto = ({aoProdutoCadastrado}) => {
                 <CampoInput 
                     id="produtoCategoria" 
                     type="select" 
-                    opcoesLista={["Star Wars", "Consoles", "Roupas", "Diversos", "novos"]} 
+                    opcoesLista={categorias} 
                     addOpcao="true"
                     aoAlterado={evento => { setCategoriaProduto(evento.target.value) }}
                     valor={categoriaProduto}

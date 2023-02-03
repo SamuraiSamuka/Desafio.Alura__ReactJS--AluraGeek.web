@@ -1,7 +1,9 @@
 import './CampoInput.css'
 import Botao from '../Botao'
+import { useState } from 'react'
 
 const CampoInput = ({id, type, children, valor, minimo, maximo, required, validacaoCustomizada, aoAlterado, opcoesLista, addOpcao, icone, comportamentoIcone}) => {
+    const [opcoes, setOpcoes] = useState(opcoesLista)
 
     function verificaSeValido (evento, mensagemErroCustomizada) {
         const campoInput = evento.target
@@ -45,26 +47,54 @@ const CampoInput = ({id, type, children, valor, minimo, maximo, required, valida
         return mensagem
     }
 
+    function mostraCampoAddOpcao(){
+        const campoAddOpcao = document.querySelector("#campoAddOpcao")
+        const botao = document.querySelector(".campo-selecao__adicionar-opcao")
+        botao.classList.toggle('rotate45')
+        campoAddOpcao.classList.toggle('dont-show')
+    }
+    
+    function salvaOpcao(){
+        const campoAddOpcao = document.querySelector("#campoAddOpcao")
+        const botao = document.querySelector(".campo-selecao__adicionar-opcao")
+
+        const valor = campoAddOpcao.querySelector("input").value
+        const match = opcoes.filter(item => item === valor)
+        if(match.length === 0 && valor.length > 0){
+            setOpcoes([...opcoes, valor])
+        }
+
+        campoAddOpcao.querySelector("input").value = ""
+        botao.classList.toggle('rotate45')
+        campoAddOpcao.classList.toggle('dont-show')
+    }
     
     return (
         type === "select"?
-            <div className='campo-selecao'>
-                <div className="campo">
-                    <label className="campo__label">{children}</label>
-                    <select className="campo__input" id={id} onChange={evento => aoAlterado? aoAlterado(evento): '' } value={valor} required={required}>
-                        <option key={0}></option>
-                        {opcoesLista.map((item, i) =>{
-                            return <option key={item}>{item}</option>
-                        })}
-                    </select>
-                    <span className="material-symbols-outlined campo__erro__icone">error</span>
-                    <span className='campo__erro'></span>
+            <div>
+                <div className='campo-selecao'>
+                    <div className="campo">
+                        <label className="campo__label">{children}</label>
+                        <select className="campo__input" id={id} onChange={evento => aoAlterado? aoAlterado(evento): '' } value={valor} required={required}>
+                            <option key={0}></option>
+                            {opcoes.map((item, i) =>{
+                                return <option key={item}>{item}</option>
+                            })}
+                        </select>
+                        <span className="material-symbols-outlined campo__erro__icone">error</span>
+                        <span className='campo__erro'></span>
+                    </div>
+                    {addOpcao === "true" ?
+                        <Botao type="button" aparencia='cinza' comportamento={(evento) => {mostraCampoAddOpcao()}}><span className="material-symbols-outlined campo-selecao__adicionar-opcao">add</span></Botao>
+                    : ''
+                    }
                 </div>
-                {addOpcao === "true" ?
-                    <Botao type="button" aparencia='cinza'><span className="material-symbols-outlined campo-selecao__adicionar-opcao">add</span></Botao>
-                : ''
-                }
-            </div>    
+                <div id="campoAddOpcao" className='campo-selecao-addOpcao dont-show'>
+                    <CampoInput >Digite a nova categoria</CampoInput>
+                    <Botao type="button" aparencia='cinza' comportamento={()=>{salvaOpcao()}}><span className="material-symbols-outlined campo-selecao__adicionar-opcao">done</span></Botao>
+                </div>
+            </div>
+
 
         : type === "textarea"?
             <div className="campo campo-textarea">
@@ -84,7 +114,7 @@ const CampoInput = ({id, type, children, valor, minimo, maximo, required, valida
         : type === "radio" ?
             <div id={id} className='campo-radio'>
                 <label className='radio-titulo'>{children}</label>
-                {opcoesLista.map(item => {
+                {opcoes.map(item => {
                     return (
                         <div className='radio-opcao' key={item}>
                             <input name="radio-input" type="radio" id={"radio-".concat(item)} required={required}></input>
