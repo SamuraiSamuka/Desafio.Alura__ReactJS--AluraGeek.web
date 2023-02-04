@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './CaixaBusca.css'
 
 const CaixaDeBusca = ({produtos}) => {
@@ -31,7 +32,7 @@ const CaixaDeBusca = ({produtos}) => {
                 : 
                     resultados[0].nulo === true ? 
                         '': 
-                        resultados.map((produto) => <a className="caixa-busca__resultados__item" href={produto.imagem_src} key={produto.id || 0}>{produto.nome}</a>  )}
+                        resultados.map((produto) => <Link className="caixa-busca__resultados__item" to={`/produto?id=${produto.id}`} key={produto.id || 0}>{produto.nome}</Link>  )}
             </div>
         </div>
     )

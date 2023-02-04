@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import dados from './db.json'
 
-import PaginaInicial from './Pages/PaginaInicial';
+import PaginaInicialf from './Pages/PaginaInicial';
 import PaginaProduto from 'Pages/PaginaProduto';
 import CadastroUsuario from 'components/CadastroUsuario';
 import Erro404 from 'components/Erro404';
@@ -94,18 +94,18 @@ function App() {
       <Routes>
         <Route 
           path='/' 
-          element={<PaginaInicial  produtos={produtos}/>}/>
+          element={<PaginaInicialf  produtos={produtos}/>}/>
         <Route 
           path='/produto' 
           element={<PaginaProduto produtos={produtos}/>}/>
         <Route 
-          path='/cadastroProduto' 
+          path='/cadastrarProduto' 
           element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
         <Route 
           path='/login' 
           element={<main className="principal"><Login aoLogar={logar}/></main>}/>
         <Route 
-          path='/cadastroUsuario' 
+          path='/cadastrarUsuario' 
           element={<main className="principal">
             <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
           </main>}/>

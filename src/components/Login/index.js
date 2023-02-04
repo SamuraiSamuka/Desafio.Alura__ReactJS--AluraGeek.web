@@ -3,6 +3,7 @@ import Formulario from '../Formulario';
 import CampoInput from '../CampoInput';
 import Botao from '../Botao';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = ({ aoLogar }) => {
 
@@ -47,8 +48,8 @@ const Login = ({ aoLogar }) => {
                 >Senha</CampoInput>
                 <Botao>Entrar</Botao>
                 <div className='login-links'>
-                    <a className='login-link'>Criar conta</a>
-                    <a className='login-link'>Esqueci minha senha</a>
+                    <Link to="/cadastrarusuario" className='login-link'>Criar conta</Link>
+                    <Link to="/recuperarsenha" className='login-link'>Esqueci minha senha</Link>
                 </div>
             </Formulario>
         </div>

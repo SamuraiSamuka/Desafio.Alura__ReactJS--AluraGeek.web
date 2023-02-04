@@ -5,6 +5,7 @@ export default function PaginaProduto({produtos}) {
   const produto = produtos[2]
   return (
     <>
+    <main className="principal">
       <ProdutoDetalhado 
         nome={produto.nome}
         preco={produto.preco}
@@ -13,6 +14,7 @@ export default function PaginaProduto({produtos}) {
         id={produto.id}
       />
       <SecaoProduto produtos={produtos} categoria="star-wars">Produtos semelhantes</SecaoProduto>
+    </main>
     </>
   )
 }
