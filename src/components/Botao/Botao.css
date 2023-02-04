@@ -3,14 +3,14 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 5rem;
+    height: 50px;
     width: fit-content;
-    padding: 0 1.6rem;
+    padding: 0 16px;
     
-    border-radius: .4rem;
-    font-size: 1.4rem;
+    border-radius: 4px;
+    font-size: 14px;
     font-weight: 600;
-    letter-spacing: .03rem;
+    letter-spacing: 0.3px;
 }
 
 .botao--azul {

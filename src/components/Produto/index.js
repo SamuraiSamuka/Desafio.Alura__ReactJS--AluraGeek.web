@@ -10,7 +10,7 @@ const Produto = (props) => {
         <img className='product__image' alt="" src={props.source}/>
         <div className='product__info'>
             <p className='product__title'>{props.name}</p>
-            <p className='product__price'>R$ {props.price}</p>
+            <p className='product__price'>{props.price}</p>
             <a className='product__link' href=''>Ver produto</a>
         </div>
     </div>)

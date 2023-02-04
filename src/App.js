@@ -1,28 +1,24 @@
 import './App.css';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import dados from './db.json'
+
 import LandingPage from './Pages/LandingPage';
 import PaginaProduto from 'Pages/PaginaProduto';
 import PaginaCadastroUsuario from 'Pages/PaginaCadastroUsuario';
 import PaginaErro404 from 'Pages/PaginaErro404';
 import PaginaRecuperarSenha from 'Pages/PaginaRecuperarSenha';
-// import PaginaCadastroProduto from 'Pages/PaginaCadastroProduto';
-// import PaginaLogin from 'Pages/PaginaLogin';
-// import ProdutoDetalhado from './components/ProdutoDetalhado';
-// import Login from './components/Login';
-// import CadastroProduto from './components/CadastroProduto';
-// import CadastroUsuario from './components/CadastroUsuario';
-// import EsqueciSenha from './components/EsqueciSenha';
-console.log(dados.produtos)
+import PaginaCadastroProduto from 'Pages/PaginaCadastroProduto';
+import PaginaLogin from 'Pages/PaginaLogin';
+
+
 function App() {
   
   const produtosIniciais = dados.produtos.map(produto => {
     produto = {id: uuidv4(), ...produto, data_criacao: new Date()}
     return produto
   })
-
-  console.log(produtosIniciais[0].categoria === "star wars")
 
   const [produtos, setProdutos] = useState([...produtosIniciais])
   
@@ -90,15 +86,17 @@ function App() {
   }
 
   return (
-    <div className="App">
-      {/* <LandingPage produtos={produtos}/> */}
-      {/* <PaginaProduto produtos={produtos}/> */}
-      {/* <PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/> */}
-      {/* <PaginaLogin produtos={produtos} aoLogar={logar}/> */}
-      {/* <PaginaCadastroUsuario produtos={produtos} aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}/> */}
-      {/* <PaginaErro404 produtos={produtos}/> */}
-      <PaginaRecuperarSenha produtos={produtos}/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage  produtos={produtos}/>}/>
+        <Route path='/produto' element={<PaginaProduto produtos={produtos}/>}/>
+        <Route path='/cadastroProduto' element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
+        <Route path='/login' element={<PaginaLogin produtos={produtos} aoLogar={logar}/>}/>
+        <Route path='/cadastroUsuario' element={<PaginaCadastroUsuario produtos={produtos} aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}/>}/>
+        <Route path='/recuperarSenha' element={<PaginaRecuperarSenha produtos={produtos}/>}/>
+        <Route path='/*' element={<PaginaErro404 produtos={produtos}/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

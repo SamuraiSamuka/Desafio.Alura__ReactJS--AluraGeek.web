@@ -8,22 +8,22 @@
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
-    height: 20rem;
+    height: 200px;
     color: #fff;
 }
 
 .banner__titulo {
-    font-size: 3rem;
+    font-size: 30px;
     font-weight: 700;
     width: fit-content;
-    margin-bottom: 1.8rem;
+    margin-bottom: 18px;
 }
 
 .banner__sub-titulo {
     font-size: 18px;
     font-weight: 600;
     width: fit-content;
-    margin-bottom: 1.6rem;
+    margin-bottom: 16px;
     
 }
 
@@ -40,7 +40,7 @@
 
 @media screen and (min-width: 720px) {
     .banner {
-        height: 30rem;
+        height: 300px;
     }
 
     .banner__titulo {
@@ -48,8 +48,8 @@
     }
 
     .banner__sub-titulo {
-        font-size: 2.2rem;
+        font-size: 22px;
         font-weight: 700;
-        letter-spacing: .05rem;
+        letter-spacing: 0.5px;
     }
 }

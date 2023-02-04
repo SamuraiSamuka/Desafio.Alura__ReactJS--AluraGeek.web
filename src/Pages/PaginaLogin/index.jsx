@@ -6,7 +6,9 @@ export default function PaginaLogin({aoLogar, produtos}) {
   return (
     <>
     <Cabecalho produtos={produtos}/>
-    <Login aoLogar={aoLogar}/>
+    <main className="principal">
+      <Login aoLogar={aoLogar}/>
+    </main>
     <Rodape />
     </>
   )

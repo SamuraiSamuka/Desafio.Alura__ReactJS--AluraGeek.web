@@ -106,9 +106,9 @@
     gap: 10px;
     z-index: -1;
     width: 100%;
-    padding: 10px 1rem 12px;
+    padding: 10px 10px 12px;
     background-color: #fafafaec;
-    border-radius: 0 0 1.5rem 1.5rem;
+    border-radius: 0 0 15px 15px;
     text-align: center;
     color: var(--preto-100);
 }

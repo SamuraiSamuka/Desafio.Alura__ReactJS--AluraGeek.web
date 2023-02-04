@@ -1,5 +1,5 @@
 import './Erro404.css'
-import imagemPng from './Erro404.svg'
+import imagemPng from './404Error.gif'
 
 export default function Erro404() {
   return (

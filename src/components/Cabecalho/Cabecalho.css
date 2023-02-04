@@ -24,8 +24,8 @@
 }
 
 .cabecalho .botao--transparente {
-    padding: 0 clamp(1rem, 7vw, 6rem);
-    height: 4.5rem;
+    padding: 0 clamp(10px, 7vw, 60px);
+    height: 45px;
 }
 
 
@@ -39,7 +39,7 @@
     }
 
     .cabecalho .botao--transparente {
-        padding: 0 clamp(1rem, 10vw, 6rem);
+        padding: 0 clamp(10px, 10vw, 60px);
     }
 }
 
