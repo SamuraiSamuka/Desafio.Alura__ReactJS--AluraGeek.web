@@ -11,16 +11,21 @@
     background-color: var(--branco);
 }
 
-.caixa-busca__lupa-mobile {
+.icone__lupa-mobile {
     display: flex;
     justify-self: flex-end;
     margin-left: 25px;
 }
 
-.caixa-busca__close-mobile {
+.icone__close-mobile {
     display: none;
     justify-self: flex-end;
     margin-left: 25px;
+}
+
+.icone-shopping-cart {
+    color: var(--preto-75);
+    display: none;
 }
 
 .cabecalho .botao--transparente {
@@ -34,12 +39,12 @@
         margin-bottom: 0px;
     }
 
-    .caixa-busca__lupa-mobile, .caixa-busca__close-mobile {
+    .icone__lupa-mobile, .icone__close-mobile {
         display: none;
     }
 
     .cabecalho .botao--transparente {
-        padding: 0 clamp(10px, 10vw, 60px);
+        padding: 0 clamp(10px, 5vw, 50px);
     }
 }
 

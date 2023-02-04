@@ -4,13 +4,15 @@ import { v4 as uuidv4 } from 'uuid';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import dados from './db.json'
 
-import LandingPage from './Pages/LandingPage';
+import PaginaInicial from './Pages/PaginaInicial';
 import PaginaProduto from 'Pages/PaginaProduto';
-import PaginaCadastroUsuario from 'Pages/PaginaCadastroUsuario';
-import PaginaErro404 from 'Pages/PaginaErro404';
-import PaginaRecuperarSenha from 'Pages/PaginaRecuperarSenha';
+import CadastroUsuario from 'components/CadastroUsuario';
+import Erro404 from 'components/Erro404';
+import EsqueciSenha from 'components/EsqueciSenha';
 import PaginaCadastroProduto from 'Pages/PaginaCadastroProduto';
-import PaginaLogin from 'Pages/PaginaLogin';
+import Login from 'components/Login';
+import Cabecalho from 'components/Cabecalho';
+import Rodape from 'components/Rodape';
 
 
 function App() {
@@ -86,17 +88,37 @@ function App() {
   }
 
   return (
+    <>
     <BrowserRouter>
+      <Cabecalho produtos={produtos}/>
       <Routes>
-        <Route path='/' element={<LandingPage  produtos={produtos}/>}/>
-        <Route path='/produto' element={<PaginaProduto produtos={produtos}/>}/>
-        <Route path='/cadastroProduto' element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
-        <Route path='/login' element={<PaginaLogin produtos={produtos} aoLogar={logar}/>}/>
-        <Route path='/cadastroUsuario' element={<PaginaCadastroUsuario produtos={produtos} aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}/>}/>
-        <Route path='/recuperarSenha' element={<PaginaRecuperarSenha produtos={produtos}/>}/>
-        <Route path='/*' element={<PaginaErro404 produtos={produtos}/>}/>
+        <Route 
+          path='/' 
+          element={<PaginaInicial  produtos={produtos}/>}/>
+        <Route 
+          path='/produto' 
+          element={<PaginaProduto produtos={produtos}/>}/>
+        <Route 
+          path='/cadastroProduto' 
+          element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
+        <Route 
+          path='/login' 
+          element={<main className="principal"><Login aoLogar={logar}/></main>}/>
+        <Route 
+          path='/cadastroUsuario' 
+          element={<main className="principal">
+            <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
+          </main>}/>
+        <Route 
+          path='/recuperarSenha' 
+          element={<main className="principal"><EsqueciSenha /></main>}/>
+        <Route 
+          path='/*' 
+          element={<main className='principal'><Erro404 /></main>}/>
       </Routes>
+    <Rodape />
     </BrowserRouter>
+    </> 
   );
 }
 

@@ -40,9 +40,10 @@ const Cabecalho = ({produtos}) => {
         <div className='cabecalho container'>
             <Logo />
             <CaixaDeBusca produtos={produtos}/>
-            <Botao type="button" aparencia="transparente">Login</Botao>
-            <span onClick={mostrarCaixaBusca} id="lupa" className="caixa-busca__lupa-mobile material-symbols-outlined">search</span>
-            <span onClick={esconderCaixaBusca} id="close" className="caixa-busca__close-mobile material-symbols-outlined">close</span>
+            <span class="material-symbols-outlined icone-shopping-cart">shopping_cart</span>
+            <Botao type="submit" aparencia="transparente" link='/login'>Login</Botao>
+            <span onClick={mostrarCaixaBusca} id="lupa" className="icone__lupa-mobile material-symbols-outlined">search</span>
+            <span onClick={esconderCaixaBusca} id="close" className="icone__close-mobile material-symbols-outlined">close</span>
         </div>
     )
 }

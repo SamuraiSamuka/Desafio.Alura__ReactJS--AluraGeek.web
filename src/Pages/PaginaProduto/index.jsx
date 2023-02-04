@@ -1,13 +1,10 @@
-import Cabecalho from "components/Cabecalho";
 import ProdutoDetalhado from "components/ProdutoDetalhado";
-import Rodape from "components/Rodape";
 import SecaoProduto from "components/SecaoProduto";
 
 export default function PaginaProduto({produtos}) {
   const produto = produtos[2]
   return (
     <>
-      <Cabecalho  produtos={produtos}/>
       <ProdutoDetalhado 
         nome={produto.nome}
         preco={produto.preco}
@@ -16,7 +13,6 @@ export default function PaginaProduto({produtos}) {
         id={produto.id}
       />
       <SecaoProduto produtos={produtos} categoria="star-wars">Produtos semelhantes</SecaoProduto>
-      <Rodape />
     </>
   )
 }

@@ -1,13 +1,10 @@
-import Cabecalho from 'components/Cabecalho';
-import Rodape from 'components/Rodape';
 import Banner from 'components/Banner';
 import SecaoProduto from 'components/SecaoProduto';
 
-export default function LandingPage({produtos}) {
+export default function PaginaInicial({produtos}) {
 
   return (
     <>
-    <Cabecalho produtos={produtos}/>
       <Banner></Banner>
       <main className='principal'>
         <SecaoProduto 
@@ -23,7 +20,6 @@ export default function LandingPage({produtos}) {
           categoria="roupas"
         >Roupas</SecaoProduto>
       </main>
-      <Rodape />
-      </>
+    </>
   )
 }
