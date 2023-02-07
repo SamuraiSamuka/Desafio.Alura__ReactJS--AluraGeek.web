@@ -41,7 +41,7 @@ const CadastroProduto = ({aoProdutoCadastrado, categorias}) => {
 
     function aoSalvar(evento){
         evento.preventDefault()
-        aoProdutoCadastrado({nome: nomeProduto, categoria: categoriaProduto, preco: precoProduto, imagem_src: imagemProduto, descricao: descricaoProduto })
+        aoProdutoCadastrado({nome: nomeProduto, categoria: categoriaProduto, preco: parseFloat(limpaPattern(precoProduto)/100), imagem_src: imagemProduto, descricao: descricaoProduto })
     }
 
     return (

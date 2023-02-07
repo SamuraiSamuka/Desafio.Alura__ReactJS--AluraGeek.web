@@ -75,6 +75,17 @@
   color: white;
   cursor: pointer;
 }
-.carrinho-container .carrinho .botao {
+.carrinho-container .carrinho .carrinho-resumo {
+  display: grid;
+  gap: 3px;
+}
+.carrinho-container .carrinho .carrinho-resumo .carrinho-resumo-titulo {
+  font-size: 16px;
+}
+.carrinho-container .carrinho .carrinho-resumo .carrinho-total {
+  font-weight: 700;
+}
+.carrinho-container .carrinho .carrinho-resumo .botao {
+  margin-top: 5px;
   width: 100%;
 }/*# sourceMappingURL=carrinho.css.map */

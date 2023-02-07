@@ -50,6 +50,7 @@
     font-weight: 700;
     color: var(--azul-100);
     height: 17px;
+    cursor: pointer;
 }
 
 .product:nth-child(n+5){

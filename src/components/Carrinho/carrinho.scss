@@ -93,8 +93,21 @@
             }
         }
 
-        .botao{
-            width: 100%;
+        .carrinho-resumo{
+            display: grid;
+            gap: 3px;
+            .carrinho-resumo-titulo{
+                font-size: 16px;
+            }
+
+            .carrinho-total{
+                font-weight: 700;
+            }
+    
+            .botao{
+                margin-top: 5px;
+                width: 100%;
+            }
         }
 
         // .carrinho-resumo {
