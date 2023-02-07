@@ -18,8 +18,15 @@ import Rodape from 'components/Rodape';
 function App() {
   
   const produtosIniciais = dados.produtos.map(produto => {
-    produto = {id: uuidv4(), ...produto, data_criacao: new Date()}
-    return produto
+    let produtoConvertido = {
+      id: uuidv4(),
+      nome: produto.nome,
+      imagem_src: produto.imagem_src,
+      categoria: produto.categoria,
+      descricao: produto.descricao,
+      preco: parseFloat(produto.preco),
+      data_criacao: new Date()}
+    return produtoConvertido
   })
 
   const [produtos, setProdutos] = useState([...produtosIniciais])

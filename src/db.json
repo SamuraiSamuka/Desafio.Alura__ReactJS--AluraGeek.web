@@ -2,147 +2,147 @@
   "produtos": [
     {
       "nome": "Caneca stormer trooper",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_983755-MLB52879024309_122022-O.webp",
       "categoria": "star wars",
       "descricao": "Caneca estilizada, temática star wars."
     },
     {
       "nome": "Pedestal Darth vader",
-      "preco": "R$ 84,90",
+      "preco": "84.90",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_809702-MLB51346188833_082022-O.webp",
       "categoria": "star wars",
       "descricao": "Luminária Abajur Darth Vader Star Wars Personalizada C/ Nome"
     },
     {
       "nome": "Boneco Yoda",
-      "preco": "R$ 69,00",
+      "preco": "69.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_710970-MLB49580721415_042022-W.webp",
       "categoria": "star wars",
       "descricao": "Boneco Action Figure Mestre Yoda Star Wars 12 Cm"
     },
     {
       "nome": "Boneco Stoomer trooper",
-      "preco": "R$ 881,00",
+      "preco": "881.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_800791-MLB46159555870_052021-O.webp",
       "categoria": "star wars",
       "descricao": "Boneco Storm Trooper Star Wars Gigante 40cm - Mimo Toys"
     },
     {
       "nome": "Boneco baby Yoda",
-      "preco": "R$ 198,99",
+      "preco": "198.99",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_606605-MLB52798590873_122022-O.webp",
       "categoria": "star wars",
       "descricao": "Boneco Baby Yoda Star Wars Mandalorian Decoração Presente"
     },
     {
       "nome": "Boneco kylo ren",
-      "preco": "R$ 1.019,99",
+      "preco": "1019.99",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_874229-MLB49184638501_022022-O.webp",
       "categoria": "star wars",
       "descricao": "Estátua Star Wars Artfx+ Kylo Ren (the Rise Of Skywalker)"
     },
     {
       "nome": "Controle Xbox",
-      "preco": "R$ 492,00",
+      "preco": "492.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_863845-MLA45045608183_032021-O.webp",
       "categoria": "consoles",
       "descricao": "Controle joystick sem fio Microsoft Xbox Wireless Controller Series X|S robot white"
     },
     {
       "nome": "Playstation 5",
-      "preco": "R$ 5.499,99",
+      "preco": "5499.99",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_611741-MLA52223303071_102022-O.webp",
       "categoria": "consoles",
       "descricao": "Sony PlayStation 5 825GB Horizon Forbidden West Bundle cor branco e preto"
     },
     {
       "nome": "Nintendo Antigo",
-      "preco": "R$ 1.299,00",
+      "preco": "1299.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_735367-MLB52769811162_122022-O.webp",
       "categoria": "consoles",
       "descricao": "Super Nintendo Antigo Anos 90+02 Controles+ 02 Cartuchos! (Recondicionado)"
     },
     {
       "nome": "Nintendo Switch",
-      "preco": "R$ 2.399,00",
+      "preco": "2399.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_986886-MLA52129068552_102022-O.webp",
       "categoria": "consoles",
       "descricao": "Nintendo Switch 32GB Mario Kart 8 Deluxe cor vermelho-néon, azul-néon e preto"
     },
     {
       "nome": "Xbox series S",
-      "preco": "R$ 2399,00",
+      "preco": "2399.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_879032-MLB52574235113_112022-O.webp",
       "categoria": "consoles",
       "descricao": "Console Microsoft Xbox Series S De 512gb, Bundle Com 3 Jogos Fortnite, Rocket League E Fall Guys"
     },
     {
       "nome": "Gameboy Old",
-      "preco": "R$ 229,00",
+      "preco": "229.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_708436-MLB51840805591_102022-O.webp",
       "categoria": "consoles",
       "descricao": "Video Game Psp Pvp Game Boy Portátil Digital"
     },
     {
       "nome": "Camisa Atari",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_958170-MLB31902417554_082019-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Atari Games Camisa Geek Retrô Clássicos Anos 80"
     },
     {
       "nome": "Camisa controle Old",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_607604-MLB52008886942_102022-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
     },
     {
       "nome": "Camisa big hamburguer",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
       "nome": "Camisa Atari",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_958170-MLB31902417554_082019-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Atari Games Camisa Geek Retrô Clássicos Anos 80"
     },
     {
       "nome": "Camisa controle Old",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_607604-MLB52008886942_102022-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Masculina Controles Videogame Gamer Geek Nerd"
     },
     {
       "nome": "Camisa big hamburguer",
-      "preco": "R$ 60,00",
+      "preco": "60.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_810445-MLB49997234358_052022-O.webp",
       "categoria": "roupas",
       "descricao": "Camiseta Hamburgão Yummy Camisa X-tudo Hamburguer Lanche"
     },
     {
       "nome": "Boneco sonic",
-      "preco": "R$ 80,00",
+      "preco": "80.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_645695-MLB51339932947_082022-O.webp",
       "categoria": "diversos",
       "descricao": "Sonic - Boneco Do Sonic- 2.5 Polegadas"
     },
     {
       "nome": "Despertador vintage",
-      "preco": "R$ 100,00",
+      "preco": "100.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_696733-MLB52007598392_102022-O.webp",
       "categoria": "diversos",
       "descricao": "Relógio Despertador Digital Elétrico De Mesa Rádio Am/fm 671"
     },
     {
       "nome": "Pikachu de pelúcia gigante",
-      "preco": "R$ 250,00",
+      "preco": "250.00",
       "imagem_src": "https://http2.mlstatic.com/D_NQ_NP_770013-MLB51388184888_092022-O.webp",
       "categoria": "diversos",
       "descricao": "Pikachu De Pelúcia Pokemon Gigante 60cm"

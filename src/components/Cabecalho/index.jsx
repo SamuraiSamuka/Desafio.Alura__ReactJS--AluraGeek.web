@@ -1,3 +1,5 @@
+import CampoInput from 'components/CampoInput'
+import Carrinho from 'components/Carrinho'
 import Botao from '../Botao'
 import CaixaDeBusca from '../CaixaBusca'
 import Logo from '../Logo'
@@ -40,10 +42,14 @@ const Cabecalho = ({produtos}) => {
         <div className='cabecalho container'>
             <Logo />
             <CaixaDeBusca produtos={produtos}/>
-            <span class="material-symbols-outlined icone-shopping-cart">shopping_cart</span>
             <Botao type="submit" aparencia="transparente" link='/login'>Login</Botao>
+            <div className='carrinho-container'>
+                <span className="material-symbols-outlined carrinho-icone">shopping_cart</span>
+                <Carrinho produtos={produtos.slice(1,4)}/>
+            </div>
             <span onClick={mostrarCaixaBusca} id="lupa" className="icone__lupa-mobile material-symbols-outlined">search</span>
             <span onClick={esconderCaixaBusca} id="close" className="icone__close-mobile material-symbols-outlined">close</span>
+
         </div>
     )
 }

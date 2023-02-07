@@ -1,0 +1,80 @@
+.carrinho-icone {
+  color: var(--preto-75);
+  padding: 8px;
+  background-color: var(--background);
+  border-radius: 50%;
+}
+
+.carrinho-container {
+  position: relative;
+}
+.carrinho-container .carrinho {
+  position: absolute;
+  z-index: 2;
+  top: 65px;
+  right: -50px;
+  min-width: 300px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border: 1px solid rgb(231, 231, 231);
+}
+.carrinho-container .carrinho .carrinho-header {
+  display: grid;
+  position: relative;
+  gap: 3px;
+}
+.carrinho-container .carrinho .carrinho-header .carrinho-titulo {
+  font-size: 24px;
+  font-weight: 700;
+}
+.carrinho-container .carrinho .carrinho-header .carrinho-subtitulo {
+  font-size: 14px;
+}
+.carrinho-container .carrinho .carrinho-header .carrinho-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.carrinho-container .carrinho .carrinho-divisoria {
+  color: var(--preto-25);
+}
+.carrinho-container .carrinho .carrinho-itens {
+  display: grid;
+  gap: 7px;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-imagem {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 10px;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-info .carrinho-item-titulo {
+  font-size: 14px;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-info .carrinho-item-preco {
+  font-size: 14px;
+  font-weight: 700;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-excluir {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 17px 5px;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-excluir:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+.carrinho-container .carrinho .botao {
+  width: 100%;
+}/*# sourceMappingURL=carrinho.css.map */

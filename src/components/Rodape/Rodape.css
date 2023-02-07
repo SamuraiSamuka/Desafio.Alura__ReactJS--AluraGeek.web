@@ -65,8 +65,6 @@
     .saiba-mais {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 'logo links saiba-mais__contato saiba-mais__contato';
-        padding-top: 64px;
-        padding-bottom: 64px;
     }
 
     .saiba-mais__nav {
@@ -84,8 +82,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-weight: 500;
     line-height: 1.2;
 }

@@ -12,13 +12,13 @@
 
 @media screen and (min-width: 1020px) {
     .logo__imagem {
-        height: 6vh;
+        height: 5vh;
     }
 }
 
 @media screen and (min-width: 1400px) {
     .logo__imagem {
-        height: 7vh;
+        height: 6vh;
     }
 }
 
