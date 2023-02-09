@@ -38,6 +38,11 @@
     padding: 16px 5% 
 }
 
+
+.dont-show {
+  display: none;
+}
+
 @media screen and (min-width: 450px) {
   /* ~8% 192*/
   .container {

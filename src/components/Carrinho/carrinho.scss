@@ -64,12 +64,14 @@
                     width: 60px;
                     height: 60px;
                     object-fit: cover;
-                    margin-right: 10px;
+                    margin-right: 8px;
                 }
                 
                 .carrinho-item-info {
+                    margin-top: 5px;
                     .carrinho-item-titulo{
                         font-size: 14px;
+                        margin-bottom: 3px;
                     }
                     
                     .carrinho-item-preco {
@@ -82,7 +84,7 @@
                     position: absolute;
                     right: 0;
                     top: 0;
-                    padding: 17px 5px;
+                    padding: 18px 5px;
                 }
                 
                 .carrinho-item-excluir:hover {
@@ -91,11 +93,15 @@
                     cursor: pointer;
                 }
             }
+            
+            .carrinho-item:hover {
+                background-color: #d9d9d9;
+            }
         }
 
         .carrinho-resumo{
             display: grid;
-            gap: 3px;
+            gap: 5px;
             .carrinho-resumo-titulo{
                 font-size: 16px;
             }

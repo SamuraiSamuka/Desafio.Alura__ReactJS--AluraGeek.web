@@ -55,10 +55,14 @@
   height: 60px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+.carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-info {
+  margin-top: 5px;
 }
 .carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-info .carrinho-item-titulo {
   font-size: 14px;
+  margin-bottom: 3px;
 }
 .carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-info .carrinho-item-preco {
   font-size: 14px;
@@ -68,16 +72,19 @@
   position: absolute;
   right: 0;
   top: 0;
-  padding: 17px 5px;
+  padding: 18px 5px;
 }
 .carrinho-container .carrinho .carrinho-itens .carrinho-item .carrinho-item-excluir:hover {
   background-color: red;
   color: white;
   cursor: pointer;
 }
+.carrinho-container .carrinho .carrinho-itens .carrinho-item:hover {
+  background-color: #d9d9d9;
+}
 .carrinho-container .carrinho .carrinho-resumo {
   display: grid;
-  gap: 3px;
+  gap: 5px;
 }
 .carrinho-container .carrinho .carrinho-resumo .carrinho-resumo-titulo {
   font-size: 16px;

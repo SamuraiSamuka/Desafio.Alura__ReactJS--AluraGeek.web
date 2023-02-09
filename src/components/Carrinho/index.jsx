@@ -7,7 +7,7 @@ export default function Carrinho({ produtos }) {
     }
 
     return (
-        <div className="carrinho">
+        <div className="carrinho dont-show">
             <div className="carrinho-header">
                 <h1 className="carrinho-titulo">Meu carrinho</h1>
                 <h3 className="carrinho-subtitulo">0 itens no carinho</h3>
