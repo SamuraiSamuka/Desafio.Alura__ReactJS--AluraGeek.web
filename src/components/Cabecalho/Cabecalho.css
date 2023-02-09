@@ -14,13 +14,11 @@
 .icone__lupa-mobile {
     display: flex;
     justify-self: flex-end;
-    /* margin-left: 25px; */
 }
 
 .icone__close-mobile {
     display: none;
     justify-self: flex-end;
-    /* margin-left: 25px; */
 }
 
 .cabecalho .botao--transparente {
@@ -105,7 +103,7 @@
 }
 /* 
         .carrinho-resumo 
-*/ */
+*/
 
 
 @media screen and (min-width: 720px) {

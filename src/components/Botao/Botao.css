@@ -36,7 +36,6 @@
 }
 
 .botao--cinza {
-    /* border: solid 1px var(--preto-50); */
     color: var(--preto-75);
     background-color: var(--branco);
 }
