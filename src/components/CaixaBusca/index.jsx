@@ -32,7 +32,7 @@ const CaixaDeBusca = ({produtos}) => {
                 : 
                     resultados[0].nulo === true ? 
                         '': 
-                        resultados.map((produto) => <Link className="caixa-busca__resultados__item" to={`/produto?id=${produto.id}`} key={produto.id || 0}>{produto.nome}</Link>  )}
+                        resultados.map((produto) => <Link className="caixa-busca__resultados__item" to={`/produto/${produto.id}`} key={produto.id || 0}>{produto.nome}</Link>  )}
             </div>
         </div>
     )

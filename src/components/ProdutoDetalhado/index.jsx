@@ -1,4 +1,4 @@
-import Botao from "../Botao"
+import Botao from "components/Botao"
 import "./ProdutoDetalhado.css"
 
 const ProdutoDetalhado = ({nome, preco, descricao, imagem_src, id}) => {

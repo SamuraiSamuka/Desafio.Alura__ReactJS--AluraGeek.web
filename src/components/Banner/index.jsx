@@ -1,4 +1,4 @@
-import Botao from '../Botao'
+import Botao from 'components/Botao'
 import './Banner.css'
 
 const Banner = () => {

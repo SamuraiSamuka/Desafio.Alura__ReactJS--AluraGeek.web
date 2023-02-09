@@ -1,7 +1,7 @@
 import './Login.css'
-import Formulario from '../Formulario';
-import CampoInput from '../CampoInput';
-import Botao from '../Botao';
+import Formulario from 'components/Formulario';
+import CampoInput from 'components/CampoInput';
+import Botao from 'components/Botao';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 

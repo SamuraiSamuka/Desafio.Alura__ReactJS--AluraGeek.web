@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Botao from '../Botao'
-import CampoInput from '../CampoInput'
-import Formulario from '../Formulario'
+import Botao from 'components/Botao'
+import CampoInput from 'components/CampoInput'
+import Formulario from 'components/Formulario'
 import './CadastroProduto.css'
 
 const CadastroProduto = ({aoProdutoCadastrado, categorias}) => {

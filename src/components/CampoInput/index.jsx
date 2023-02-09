@@ -1,5 +1,5 @@
 import './CampoInput.css'
-import Botao from '../Botao'
+import Botao from 'components/Botao'
 import { useState } from 'react'
 
 const CampoInput = ({id, type, children, valor, minimo, maximo, required, validacaoCustomizada, aoAlterado, opcoesLista, addOpcao, icone, comportamentoIcone}) => {

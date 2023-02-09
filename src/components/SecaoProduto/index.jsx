@@ -1,5 +1,5 @@
 import './SecaoProduto.css'
-import Produto from "../Produto"
+import Produto from "components/Produto"
 import { Link } from 'react-router-dom'
 
 const SecaoProduto = ({produtos, categoria, children}) => {

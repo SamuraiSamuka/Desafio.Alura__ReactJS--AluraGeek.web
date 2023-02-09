@@ -1,4 +1,4 @@
-import Botao from 'components/Botao'
+// import Botao from 'components/Botao'
 import { Link } from 'react-router-dom'
 import './Produto.css'
 

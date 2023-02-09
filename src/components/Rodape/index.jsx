@@ -1,7 +1,7 @@
-import Formulario from '../Formulario'
-import Logo from '../Logo'
-import CampoInput from '../CampoInput'
-import Botao from '../Botao'
+import Formulario from 'components/Formulario'
+import Logo from 'components/Logo'
+import CampoInput from 'components/CampoInput'
+import Botao from 'components/Botao'
 import './Rodape.css'
 
 const Rodape = () => {
