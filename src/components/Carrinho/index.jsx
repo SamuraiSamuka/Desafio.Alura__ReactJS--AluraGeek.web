@@ -31,8 +31,8 @@ export default function Carrinho({ produtos }) {
             <hr className='carrinho-divisoria' />
             <div className="carrinho-resumo">
                 <h2 className='carrinho-resumo-titulo'>Sub total do carrinho</h2>
-                <h3 className='carrinho-total'>{aplicaPatternRealBra(produtos.reduce((acumulador, valorAtual) => { return acumulador + valorAtual.preco }, 0))}</h3>
-                <Botao aparencia='transparente' link='/'>Finalizar pedido</Botao>
+                <h3 className='carrinho-total'>{aplicaPatternRealBra(produtos.reduce((acumulador, produtoAtual) => { return acumulador + produtoAtual.preco }, 0))}</h3>
+                <Botao aparencia='transparente' link='#'>Finalizar pedido</Botao>
             </div>
         </div>
     )

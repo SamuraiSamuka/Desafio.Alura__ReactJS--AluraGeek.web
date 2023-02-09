@@ -39,9 +39,9 @@
 }
 
 
-.dont-show {
+/* .dont-show {
   display: none;
-}
+} */
 
 @media screen and (min-width: 450px) {
   /* ~8% 192*/
