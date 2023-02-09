@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import dados from './db.json'
 
-import PaginaInicialf from './Pages/PaginaInicial';
+import PaginaInicial from './Pages/PaginaInicial';
 import PaginaProduto from 'Pages/PaginaProduto';
 import CadastroUsuario from 'components/CadastroUsuario';
 import Erro404 from 'components/Erro404';
@@ -15,8 +15,8 @@ import Cabecalho from 'components/Cabecalho';
 import Rodape from 'components/Rodape';
 
 
-function App() {
-  
+function AppRoutes() {
+
   const produtosIniciais = dados.produtos.map(produto => {
     let produtoConvertido = {
       id: uuidv4(),
@@ -99,26 +99,26 @@ function App() {
     <BrowserRouter>
       <Cabecalho produtos={produtos}/>
       <Routes>
-        <Route 
-          path='/' 
-          element={<PaginaInicialf  produtos={produtos}/>}/>
-        <Route 
-          path='/produto' 
-          element={<PaginaProduto produtos={produtos}/>}/>
-        <Route 
-          path='/cadastrarProduto' 
-          element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
-        <Route 
-          path='/login' 
-          element={<main className="principal"><Login aoLogar={logar}/></main>}/>
-        <Route 
-          path='/cadastrarUsuario' 
-          element={<main className="principal">
-            <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
-          </main>}/>
-        <Route 
-          path='/recuperarSenha' 
-          element={<main className="principal"><EsqueciSenha /></main>}/>
+        <Route path='/'>
+          <Route index  element={<PaginaInicial  produtos={produtos}/>} />
+          <Route 
+            path='produto/:id' 
+            element={<PaginaProduto produtos={produtos}/>}/>
+          <Route 
+            path='cadastrarProduto' 
+            element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
+          <Route 
+            path='login' 
+            element={<main className="principal"><Login aoLogar={logar}/></main>}/>
+          <Route 
+            path='cadastrarUsuario' 
+            element={<main className="principal">
+              <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
+            </main>}/>
+          <Route 
+            path='recuperarSenha' 
+            element={<main className="principal"><EsqueciSenha /></main>}/>
+        </Route>
         <Route 
           path='/*' 
           element={<main className='principal'><Erro404 /></main>}/>
@@ -130,4 +130,4 @@ function App() {
 }
 
 
-export default App;
+export default AppRoutes;

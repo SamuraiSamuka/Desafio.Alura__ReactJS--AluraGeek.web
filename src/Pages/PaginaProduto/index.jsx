@@ -1,8 +1,19 @@
+import Erro404 from "components/Erro404";
 import ProdutoDetalhado from "components/ProdutoDetalhado";
 import SecaoProduto from "components/SecaoProduto";
+import { useParams } from "react-router-dom";
 
 export default function PaginaProduto({produtos}) {
-  const produto = produtos[2]
+  const id = useParams().id;
+
+  const produto = produtos.find(produto => produto.id === id)
+
+  if (!produto) {
+    return (
+      <Erro404></Erro404>
+    )
+  }
+
   return (
     <>
     <main className="principal">
