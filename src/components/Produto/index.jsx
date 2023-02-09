@@ -17,7 +17,7 @@ const Produto = ({source, name, price, id}) => {
         <div className='product__info'>
             <p className='product__title'>{name}</p>
             <p className='product__price'>{aplicaPatternRealBra(price)}</p>
-            <Link className='product__link' to={`produto/${id}`}>Ver produto</Link>
+            <Link className='product__link' to={`/produto/${id}`}>Ver produto</Link>
         </div>
     </div>)
 }
