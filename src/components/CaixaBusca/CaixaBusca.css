@@ -63,7 +63,6 @@
     .caixa-busca {
         display: flex;
         position: relative;
-        top: 0;
     
         width: min(100%, 500px);
         z-index: 1;

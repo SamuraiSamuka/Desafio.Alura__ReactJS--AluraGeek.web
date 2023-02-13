@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './CaixaBusca.css'
 
-const CaixaDeBusca = ({produtos}) => {
+const CaixaDeBusca = ({produtos, classeComponente}) => {
     const [resultados, setResultados] = useState([{nulo:true}])
     
     const mostraInput = (evento) => {
@@ -21,7 +21,7 @@ const CaixaDeBusca = ({produtos}) => {
     }
 
     return (
-        <div className="caixa-busca">
+        <div className={`caixa-busca ${classeComponente || ''}`}>
             <div className="caixa-busca__inputs">
                 <input type="text" className="caixa-busca__input" onChange={mostraInput} placeholder="O que deseja encontrar?" id="inputBusca" />
                 <span className="material-symbols-outlined caixa-busca__lupa">search</span>

@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route, Outlet, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import dados from 'db.json'
 
 import PaginaInicial from 'Pages/PaginaInicial';
@@ -94,38 +94,39 @@ function AppRoutes() {
     verificaSeValido(evento, "E-mail já utilizado.")
   }
 
-  return (
-    <>
-    <BrowserRouter>
-      <Cabecalho produtos={produtos}/>
-      <Routes>
-        <Route path='/'>
-          <Route index  element={<PaginaInicial  produtos={produtos}/>} />
-          <Route 
-            path='produto/:id' 
-            element={<PaginaProduto produtos={produtos}/>}/>
-          <Route 
-            path='cadastrarProduto' 
-            element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
-          <Route 
-            path='login' 
-            element={<main className="principal"><Login aoLogar={logar}/></main>}/>
-          <Route 
-            path='cadastrarUsuario' 
-            element={<main className="principal">
-              <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
-            </main>}/>
-          <Route 
-            path='recuperarSenha' 
-            element={<main className="principal"><EsqueciSenha /></main>}/>
-        </Route>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<><Cabecalho produtos={produtos}/><Outlet/><Rodape /></>}>
+        <Route index  element={<PaginaInicial  produtos={produtos}/>} />
+        <Route 
+          path='produto/:id' 
+          element={<PaginaProduto/>}
+          loader={({ params }) => { 
+            const produtoAtual = produtos.find(produto => produto.id === params.id)
+            return {produtos, produtoAtual} }}/>
+        <Route 
+          path='cadastrarProduto' 
+          element={<PaginaCadastroProduto salvaProduto={salvaProduto} produtos={produtos} categorias={categorias}/>}/>
+        <Route 
+          path='login' 
+          element={<main className="principal"><Login aoLogar={logar}/></main>}/>
+        <Route 
+          path='cadastrarUsuario' 
+          element={<main className="principal">
+            <CadastroUsuario aoUsuarioCadastrado={salvaUsuario} verificaEmail={validaEmail}></CadastroUsuario>
+          </main>}/>
+        <Route 
+          path='recuperarSenha' 
+          element={<main className="principal"><EsqueciSenha /></main>}/>
         <Route 
           path='/*' 
           element={<main className='principal'><Erro404 /></main>}/>
-      </Routes>
-    <Rodape />
-    </BrowserRouter>
-    </> 
+      </Route>
+    )
+  )
+
+  return (
+    <RouterProvider router={router}/>
   );
 }
 
