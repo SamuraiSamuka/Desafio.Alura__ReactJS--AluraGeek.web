@@ -2,6 +2,7 @@
 import Botao from 'components/Botao'
 import CaixaDeBusca from 'components/CaixaBusca'
 import Logo from 'components/Logo'
+import { useLoaderData } from 'react-router-dom'
 import './Cabecalho.css'
 
 // const mostrarCaixaBusca = (evento) => {
@@ -36,7 +37,8 @@ import './Cabecalho.css'
 //     }, 100)
 // }
 
-const Cabecalho = ({produtos}) => {
+const Cabecalho = () => {
+    const produtos = useLoaderData();
     return (
         <div className='cabecalho container'>
             <Logo />

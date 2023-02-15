@@ -1,7 +1,9 @@
 import CadastroProduto from "components/CadastroProduto";
 import SecaoProduto from "components/SecaoProduto";
+import { useLoaderData } from "react-router-dom";
 
-export default function PaginaCadastroProduto({salvaProduto, produtos, categorias}) {
+export default function PaginaCadastroProduto({salvaProduto}) {
+  const {categorias, produtos} = useLoaderData();
   return (
     <>
       <main className='principal'>

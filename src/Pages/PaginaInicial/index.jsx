@@ -1,7 +1,9 @@
 import Banner from 'components/Banner';
 import SecaoProduto from 'components/SecaoProduto';
+import { useLoaderData } from 'react-router-dom';
 
-export default function PaginaInicial({produtos}) {
+export default function PaginaInicial() {
+  const produtos = useLoaderData()
 
   return (
     <>

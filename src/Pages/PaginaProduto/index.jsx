@@ -6,11 +6,11 @@ import { useParams, useLoaderData } from "react-router-dom";
 export default function PaginaProduto() {
   const {produtos, produtoAtual} = useLoaderData();
 
-  if (!produtoAtual) {
-    return (
-      <main className="principal"><Erro404/></main>
-    )
-  }
+  // if (!produtoAtual) {
+  //   return (
+  //     <main className="principal"><Erro404/></main>
+  //   )
+  // }
 
   return (
     <>
